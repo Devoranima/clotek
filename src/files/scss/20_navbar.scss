@@ -1,0 +1,107 @@
+//Navigation bar
+.navbar{
+  --bs-navbar-padding-y: 0;
+  height:70px;
+  z-index: 100;
+
+  background-color: rgba($color: #000000, $alpha: .6) !important;
+
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif; //Какого хуя оно не перезаписывается 
+}
+
+//Logo
+.navbar-brand{
+  font-family: 'Varela Round', cursive;
+  font-weight: 400;
+  font-size: 40px;
+  &::after{
+    content:"TM";
+    font-size: 10px;
+  }
+}
+
+.navbar-nav{
+  margin-left: auto;
+}
+
+//Navigation element
+.nav-item{
+  padding: 0 15px;
+  font-family: "PT Sans",sans-serif !important;
+}
+
+//Pricelist button
+.btn-pricelist{
+  height:80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 0 0 10px 10px;
+  border-width: 0;
+  
+  position: relative;
+
+  transition: all .2 linear;
+
+  //Text
+  >span{
+    font-family: 'PT Sans',sans-serif;
+    font-size: 16px;
+    color:#fff;
+  }
+
+  //Icon
+  >.bi-tags-fill{
+    margin-top: 10px;
+    fill: #fff;
+  }
+
+  &:hover{
+    >.bi-tags-fill{
+      fill: #ececec;
+    }
+
+    >span{
+      color: #ececec;
+    }
+  }
+
+  &::after{
+    content:"";
+    width: 100%;
+    height: 105%;
+
+    border-radius: 0 0 10px 10px;
+    background-color: #a1000b;
+
+    position: absolute;
+    top:0;
+    left: 5px;
+    z-index: -1;
+  }
+  .show{
+    display: block;
+  }
+  
+  @include gradient;
+}
+
+
+//Dropdown triangle
+.btn-nav--dropdown{
+  margin-left: 10px !important;
+  max-width: 50px;
+  max-height:50px;
+  background-color: transparent;
+  border-color: transparent !important;
+  &:hover{
+    background-color: rgba(0, 0, 0, .3);
+  }
+  &:active{
+    background-color: rgba(0, 0, 0, .5);
+  }
+}
+

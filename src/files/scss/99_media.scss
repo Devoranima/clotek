@@ -1,0 +1,42 @@
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba($color: #000000, $alpha: .8);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .btn-pricelist{
+    border-color: #7F0008;
+    border-width: 2px;
+    border-radius: 10px 0 0 10px;
+    &::after{
+      display: none;
+    }
+  }
+
+  .nav-item.dropdown{
+    padding: var(--bs-nav-link-padding-y) 15px;
+  }
+
+  .nav-links{
+    display: -webkit-box;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navbar-nav{
+    margin-left: 0;
+    &:nth-child(1){
+      margin: 20px 0;
+      margin-right: auto;
+      width:50%;
+    }
+    &:nth-child(2){
+      width:50%;
+    }
+  }
+
+  
+
+}

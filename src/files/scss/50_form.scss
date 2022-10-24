@@ -1,0 +1,71 @@
+
+.request-form{
+  margin-top: -15px;
+  background-color: #ECECEC;
+  border-radius: 10px 10px 5px 5px;
+  height: auto;
+  align-self:flex-start;
+}
+
+.form-header{
+  border-radius: 10px 10px 0 0;
+  padding: 20px 30px;
+  background-color: $main-color;
+}
+
+.form-title{
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.form-subtitle{
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.about-form{
+  padding: 0;
+}
+
+.form-content{
+  padding: 30px 15px 10px;
+}
+
+.form-group{
+  margin: 0 0 30px;
+}
+
+.input{
+  font-size: 20px;
+  display: block;
+  width: 100%;
+
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  padding-left: 40px;
+
+  transition: all .2s linear;
+
+  &:focus{
+    outline: none;
+    border-color: rgba(0, 0, 0, .6);
+  }
+
+  }
+
+  .input-textarea{
+    resize: vertical;
+    min-height: 2em;
+    overflow: auto;
+  }
+
+  .btn-form-submit{
+  font-size: 28px;
+  padding: 10px 0;
+  width: 100%;
+  transition: all .2s linear;
+
+  @include gradient;
+}
