@@ -1,10 +1,17 @@
-
 .request-form{
-  margin-top: -15px;
+  z-index: 50;
+  margin-top: -20px;
   background-color: #ECECEC;
   border-radius: 10px 10px 5px 5px;
   height: auto;
   align-self:flex-start;
+  padding: 0;
+  transition: all .3s linear;
+  &.jump{
+    &:hover{
+      margin-top: -70px;
+    }
+  }
 }
 
 .form-header{
@@ -24,9 +31,6 @@
   line-height: 1;
 }
 
-.about-form{
-  padding: 0;
-}
 
 .form-content{
   padding: 30px 15px 10px;
@@ -53,15 +57,24 @@
     border-color: rgba(0, 0, 0, .6);
   }
 
-  }
+}
 
-  .input-textarea{
-    resize: vertical;
-    min-height: 2em;
-    overflow: auto;
-  }
+.input-name{
+  background: url("../img/person.svg") left 10px top 5px no-repeat;
+}
 
-  .btn-form-submit{
+.input-tel{
+  background: url("../img/call.svg") left 10px top 5px no-repeat;
+}
+
+.input-textarea{
+  background: url("../img/message.svg") left 10px top 10px no-repeat;
+  resize: vertical;
+  min-height: 2em;
+  overflow: auto;
+}
+
+.btn-form-submit{
   font-size: 28px;
   padding: 10px 0;
   width: 100%;
