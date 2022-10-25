@@ -39,30 +39,13 @@
   flex-direction: column;
   align-items: center;
 
-  border-radius: 0 0 10px 10px;
+  /*
+    border-radius: 0 0 10px 10px;
   border-width: 0;
   
   position: relative;
 
   transition: all .2 linear;
-
-  //Text
-  >span{
-    font-family: 'PT Sans',sans-serif;
-    font-size: 16px;
-    color:#fff;
-  }
-
-  //Icon
-  >.bi-tags-fill{
-    margin-top: 10px;
-    fill: #fff;
-  }
-
-  &:hover{
-    >.bi-tags-fill{
-      fill: #ececec;
-    }
 
     >span{
       color: #ececec;
@@ -85,7 +68,31 @@
   .show{
     display: block;
   }
+  */
+
+  //Text
+  >span{
+    font-size: 16px;
+  }
+
+  //Icon
+  >.bi-tags-fill{
+    margin-top: 10px;
+    fill: #fff;
+  }
   
+  &:hover{
+    >.bi-tags-fill{
+      fill: #e6e6e6;
+    }
+  }
+  
+  &:active{
+    >.bi-tags-fill{
+      fill: #999999;
+    }
+  }
+
   @include gradient;
 }
 
