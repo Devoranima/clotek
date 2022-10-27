@@ -1,7 +1,7 @@
 $main-color:#1A512E;
 $second-color:#970009;
 
-@mixin gradient{
+.gradient{
   background-image: linear-gradient(to right, #970009, #DF0113);
   transition: all .2s linear;
   box-shadow: 1px 5px rgb(214, 104, 104);
@@ -144,7 +144,6 @@ body{
     }
   }
 
-  @include gradient;
 }
 
 
@@ -270,7 +269,11 @@ body{
   font-size: 20px;
   padding: 10px 20px;
 
-  @include gradient;
+}
+
+.product-2{
+  background-color: $main-color;
+  color: #fff;
 }
 .request-form{
   z-index: 50;
@@ -355,7 +358,6 @@ body{
   width: 100%;
   transition: all .2s linear;
 
-  @include gradient;
 }
 
 @media (max-width: 991px) {
@@ -398,4 +400,30 @@ body{
 
   
 
+}
+
+.review{
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+.splitter{
+  width: 80%;
+  height: 4px;
+  background-color: #bbb;
+}
+
+.review_name{
+  font-size: 30px;
+}
+
+.review_description, .review_content{
+  font-size: 23px;
+  font-weight: 200;
+}
+
+.btn-reviews{
+  padding: 15px 70px;
+  font-size: 30px;
+  font-weight: 400;
 }

@@ -1,0 +1,25 @@
+.review{
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+.splitter{
+  width: 80%;
+  height: 4px;
+  background-color: #bbb;
+}
+
+.review_name{
+  font-size: 30px;
+}
+
+.review_description, .review_content{
+  font-size: 23px;
+  font-weight: 200;
+}
+
+.btn-reviews{
+  padding: 15px 70px;
+  font-size: 30px;
+  font-weight: 400;
+}
