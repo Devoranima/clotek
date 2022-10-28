@@ -4,6 +4,14 @@
   background-color: $main-color;
   color: #fff;
   padding-bottom: 30px;
+  position: relative;
+  &::after{
+    display: block;
+    position: absolute;
+    content: url("../img/angle-double-down.svg");
+    left: -400px;
+    top:-400px;
+  }
 }
 
 .about-brand{

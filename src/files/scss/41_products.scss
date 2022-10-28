@@ -18,7 +18,11 @@
 
 }
 
+.product-1{
+  background: url("../img/truck.svg") no-repeat left 50px bottom -1px;
+}
+
 .product-2{
-  background-color: $main-color;
+  background: url("../img/auto.svg") no-repeat right 100px bottom -1px, $main-color;
   color: #fff;
 }

@@ -142,6 +142,7 @@ body {
   width: 100%;
   height: 100vh;
   max-height: 1100px;
+  background: url("../img/gears-solid.svg") no-repeat right -350px bottom -350px;
 }
 
 .intro-basis {
@@ -172,6 +173,14 @@ body {
   background-color: #1A512E;
   color: #fff;
   padding-bottom: 30px;
+  position: relative;
+}
+.about::after {
+  display: block;
+  position: absolute;
+  content: url("../img/angle-double-down.svg");
+  left: -400px;
+  top: -400px;
 }
 
 .about-brand {
@@ -242,8 +251,12 @@ body {
   padding: 10px 20px;
 }
 
+.product-1 {
+  background: url("../img/truck.svg") no-repeat left 50px bottom -1px;
+}
+
 .product-2 {
-  background-color: #1A512E;
+  background: url("../img/auto.svg") no-repeat right 100px bottom -1px, #1A512E;
   color: #fff;
 }
 
