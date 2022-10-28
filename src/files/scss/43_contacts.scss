@@ -1,0 +1,23 @@
+.contacts{
+  background:  url("../img/map.svg") no-repeat left 30px top 130px, $main-color;
+  padding: 50px 0 200px;
+  >.container>.section_title{
+    color:#fff;
+    margin-bottom: 50px;
+  }
+}
+
+.map{
+  background-color: #bbb;
+
+}
+
+.contacts_content{
+  background-color: #D9D9D9;
+  padding: 70px;
+}
+
+.contacts_title{
+  font-size: 40px;
+  font-weight: 400;
+}
