@@ -44,6 +44,9 @@ body{
 
 .section{
   margin-bottom: 100px;
+  &.prod{
+    margin-bottom: 0;
+  }
 }
 
 .section_title{
