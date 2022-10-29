@@ -484,3 +484,22 @@ body{
   
 
 }
+
+@media(max-width:767px){
+  .ben-item{
+    width: 50%;
+    padding-bottom: 30px;
+    &:nth-child(n+2){
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media(max-width:328px){
+  .ben-item{
+    width: 100%;
+    &:nth-child(-n+3){
+      padding-bottom: 30px;
+    }
+  }
+}
