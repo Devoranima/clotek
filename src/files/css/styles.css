@@ -234,7 +234,6 @@ body {
 
 .product_block-title {
   font-size: 40px;
-  margin-bottom: 30px;
 }
 
 .product {
@@ -242,8 +241,13 @@ body {
 }
 
 .product_block-description {
-  text-align: right;
   margin-bottom: 30px;
+}
+.product_block-description.p1 {
+  text-align: right;
+}
+.product_block-description.p2 {
+  text-align: left;
 }
 
 .product_more-info {
@@ -333,9 +337,13 @@ body {
 }
 
 .form-header {
+  color: #fff;
   border-radius: 10px 10px 0 0;
   padding: 20px 30px;
   background-color: #1A512E;
+}
+.form-header > .btn-close {
+  display: none;
 }
 
 .form-title {
@@ -404,6 +412,65 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modal.show {
+  display: block;
+}
+
+.modal_inner {
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.form_modal {
+  align-self: center;
+  max-width: 500px;
+  border-radius: 0;
+  position: relative;
+}
+.form_modal > .form-header {
+  border-radius: 0;
+}
+.form_modal > .form-header > .btn-close {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.thanks {
+  align-self: center;
+  background-color: #fff;
+}
+
+.thanks_header {
+  padding: 50px;
+  width: 100%;
+  background-color: #1A512E;
+  position: relative;
+}
+.thanks_header > .btn-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.thanks_title {
+  font-weight: 400;
+  color: #1A512E;
+  padding: 36px;
+}
+
 @media (max-width: 991px) {
   .navbar-collapse {
     background-color: rgba(0, 0, 0, 0.8);
@@ -444,6 +511,30 @@ body {
   }
   .ben-item:nth-child(n+2) {
     padding-bottom: 0;
+  }
+  .product {
+    padding: 50px;
+  }
+  .product_block-description {
+    font-size: 20px;
+    text-align: center !important;
+  }
+}
+@media (max-width: 577px) {
+  .section_title {
+    font-size: 30px;
+  }
+  .about-description {
+    font-size: 20px;
+  }
+  .ben-text {
+    font-size: 15px;
+  }
+  .product_block-title {
+    font-size: 24px;
+  }
+  .product_block-description {
+    font-size: 16px;
   }
 }
 @media (max-width: 328px) {

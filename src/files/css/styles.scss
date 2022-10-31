@@ -200,7 +200,6 @@ body{
   bottom: 60px;
 }
 
-
 .about{
   background-color: $main-color;
   color: #fff;
@@ -266,7 +265,6 @@ body{
 }
 .product_block-title{
   font-size: 40px;
-  margin-bottom: 30px;
 }
 
 .product{
@@ -274,8 +272,15 @@ body{
 }
 
 .product_block-description{
-  text-align: right;
   margin-bottom: 30px;
+  &.p1{
+    text-align: right;
+  }
+  
+  &.p2{
+    text-align: left;
+  }
+
 }
 
 .product_more-info{
@@ -368,9 +373,13 @@ body{
 }
 
 .form-header{
+  color: #fff;
   border-radius: 10px 10px 0 0;
   padding: 20px 30px;
   background-color: $main-color;
+  &>.btn-close{
+    display: none;
+  }
 }
 
 .form-title{
@@ -443,6 +452,64 @@ body{
   width: 100%;
   background-color: rgba(0, 0, 0, .4);
 }
+.modal{
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, .9);
+  &.show{
+    display: block;
+  }
+}
+
+.modal_inner{
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.form_modal{
+  align-self: center;
+  max-width: 500px;
+  border-radius: 0;
+  position: relative;
+  &>.form-header{
+    border-radius: 0;
+    &>.btn-close{
+      display: block;
+      position: absolute;
+      right:5px;
+      top:5px;
+    }
+  }
+}
+
+.thanks{
+  align-self: center;
+  background-color: #fff;
+}
+
+.thanks_header{
+  padding: 50px;
+  width: 100%;
+  background-color: $main-color;
+  position: relative;
+  &>.btn-close{
+    position: absolute;
+    right: 15px;
+    top:15px;
+  }
+}
+
+.thanks_title{
+  font-weight: 400;
+  color:$main-color;
+  padding: 36px;
+}
 
 @media (max-width: 991px) {
   .navbar-collapse {
@@ -492,6 +559,38 @@ body{
     &:nth-child(n+2){
       padding-bottom: 0;
     }
+  }
+
+  .product{
+    padding:50px;
+  }
+
+  .product_block-description{
+    font-size: 20px;
+    text-align: center !important;
+  }
+}
+
+@media(max-width: 577px){
+  .section_title{
+    font-size: 30px;
+  }
+
+  .about-description{
+    font-size: 20px;
+  }
+
+  .ben-text{
+    font-size: 15px;
+  }
+
+  
+  .product_block-title{
+    font-size: 24px;
+  }
+
+  .product_block-description{
+    font-size: 16px;
   }
 }
 

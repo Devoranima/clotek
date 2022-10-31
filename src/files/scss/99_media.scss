@@ -48,6 +48,38 @@
       padding-bottom: 0;
     }
   }
+
+  .product{
+    padding:50px;
+  }
+
+  .product_block-description{
+    font-size: 20px;
+    text-align: center !important;
+  }
+}
+
+@media(max-width: 577px){
+  .section_title{
+    font-size: 30px;
+  }
+
+  .about-description{
+    font-size: 20px;
+  }
+
+  .ben-text{
+    font-size: 15px;
+  }
+
+  
+  .product_block-title{
+    font-size: 24px;
+  }
+
+  .product_block-description{
+    font-size: 16px;
+  }
 }
 
 @media(max-width:328px){
