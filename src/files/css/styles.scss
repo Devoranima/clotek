@@ -168,10 +168,10 @@ body{
 
 
 .intro{
-  padding-top: 210px;
+  padding-top: 160px;
   width: 100%;
   height:100vh;
-  max-height:1100px;
+  max-height:1500px;
   background: url("../img/gears-solid.svg") no-repeat right -350px bottom -350px;
 }
 
@@ -183,6 +183,7 @@ body{
 .intro-title{
   font-family: 'Oswald';
   font-size: 60px;
+  line-height: 1;
 }
 
 .intro-subtitle{
@@ -347,8 +348,8 @@ body{
 }
 
 .contacts_content{
+  padding: 15px;
   background-color: #D9D9D9;
-  padding: 70px;
 }
 
 .contacts_title{
@@ -356,9 +357,10 @@ body{
   font-weight: 400;
 }
 
+
+//машинка
 .request-form{
   z-index: 50;
-  margin-top: -20px;
   background-color: #ECECEC;
   border-radius: 10px 10px 5px 5px;
   height: auto;
@@ -444,6 +446,11 @@ body{
   transition: all .2s linear;
 
 }
+
+
+.about_form{
+  margin-top: -20px;
+}
 .footer{
   font-size: 16px;
   color:rgba(255, 255, 255, .7);
@@ -510,6 +517,12 @@ body{
   color:$main-color;
   padding: 36px;
 }
+@media(max-width: 1199px){
+  .intro{
+    padding-top: 130px;
+  }
+}
+
 
 @media (max-width: 991px) {
   .navbar-collapse {
@@ -548,11 +561,41 @@ body{
     }
   }
 
+
+  //Intro
+
+  .intro{
+    padding-top: 100px;
+  }
+
+  .intro-title{
+    font-size:50px;
+  }
+
+  .intro-subtitle{
+    font-size: 23px;
+  }
+
+
+  //Form
+
+
+  .about_form{
+    margin-top: 0;
+  }
   
+  //Contacts
+
+  .contacts_description{
+    font-size: 20px;
+  }
 
 }
 
 @media(max-width:767px){
+
+  //Benefits
+
   .ben-item{
     width: 50%;
     padding-bottom: 30px;
@@ -560,6 +603,9 @@ body{
       padding-bottom: 0;
     }
   }
+
+
+  //Products
 
   .product{
     padding:50px;
@@ -569,12 +615,29 @@ body{
     font-size: 20px;
     text-align: center !important;
   }
+
+  .row.prod{
+    flex-direction: column-reverse;
+  }
 }
 
 @media(max-width: 577px){
   .section_title{
     font-size: 30px;
   }
+
+
+  //Intro
+
+  .intro-title{
+    font-size: 40px;
+  }
+
+  .intro-subtitle{
+    font-size: 20px;
+  }
+  
+  //About
 
   .about-description{
     font-size: 20px;
@@ -584,6 +647,8 @@ body{
     font-size: 15px;
   }
 
+
+  //Products
   
   .product_block-title{
     font-size: 24px;
