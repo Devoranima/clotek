@@ -1,1 +1,1 @@
-$((function(){}));
+$(document).ready((function(){const e=$("body");$(".navbar-toggler").on("click",(()=>{e.toggleClass("no-scroll")}));new Swiper(".swiper",{});const i=new Swiper(".swiper--intro_text",{loop:!0,autoplay:{delay:2e3},navigator:!1}),o=new Swiper(".swiper--intro_images",{loop:!0});i.on("slideChange",(()=>{o.slideNext()})),$(".slider-reviews").slick({navigation:!1,arrows:!1,autoplay:!1,autoplaySpeed:1e3,infinite:!0,speed:500,slidesToShow:3,responsive:[{breakpoint:1e3,settings:{slidesToShow:3,infinite:!0}}]})}));

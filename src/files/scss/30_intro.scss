@@ -3,7 +3,8 @@
   width: 100%;
   height:100vh;
   max-height:1500px;
-  background: url("../img/gears-solid.svg") no-repeat right -350px bottom -350px;
+  position: relative;
+  //background: url("../img/gears-solid.svg") no-repeat right -350px bottom -350px;
 }
 
 .intro-basis{
@@ -14,7 +15,7 @@
 .intro-title{
   font-family: 'Oswald';
   font-size: 60px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .intro-subtitle{
@@ -25,9 +26,71 @@
 }
 
 .img-intro{
+  display: none;
+  z-index: 5;
   width: 700px;
   position: absolute;
 
   right:0;
   bottom: 60px;
+}
+
+.intro-background{
+
+  z-index: 2;
+  position: absolute;
+  right:0;
+  top:0;
+  pointer-events: none;
+}
+
+
+
+
+
+
+
+
+// Swiper intro
+
+.slider--intro_text{
+  height: auto;
+  width: 300px;
+  pointer-events: none;
+}
+
+.intro-basis{
+  position: relative;
+}
+
+.slider--intro_images{
+  width: 50%;
+  position: absolute;
+  right: 10%;
+  bottom:10%;
+  z-index: 10;
+  margin: auto 0;
+  pointer-events: none;
+}
+
+.slider--intro_images::before{
+    content:"";
+    display: block;
+    width:6px;
+    height:100%;
+
+    position:absolute;
+    top:0;
+    z-index: 3;
+
+}
+
+.slider--intro_images::before{
+    left:0;
+    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+}
+
+.slider--intro_image{
+  width: 90%;
+  height: auto;
 }

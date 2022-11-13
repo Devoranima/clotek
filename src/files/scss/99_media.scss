@@ -2,6 +2,13 @@
   .intro{
     padding-top: 130px;
   }
+
+  .intro-background{
+    width: 50%;
+    right: 0;
+    top:0;
+  }
+
 }
 
 
@@ -42,6 +49,11 @@
     }
   }
 
+  //Form
+
+  .form-header{
+    border-radius: 0; 
+  }
 
   //Intro
 
@@ -65,7 +77,20 @@
     margin-top: 0;
   }
   
+  //Reviews
+
+  .reviews{
+    background-size: 100% auto;
+    background-position: left 0 bottom 50%;
+  }
+
+
   //Contacts
+
+  .contacts{
+    background-size: 110% 110%;
+    background-position: left 10% top 10%;
+  }
 
   .contacts_description{
     font-size: 20px;
@@ -74,6 +99,10 @@
 }
 
 @media(max-width:767px){
+  //Intro
+  .intro-background{
+    display: none;
+  }
 
   //Benefits
 
@@ -131,6 +160,12 @@
 
   //Products
   
+  .product-1, 
+  .product-2{
+    background-size: 100% auto;
+    background-position: left 0 bottom 0;
+  }
+
   .product_block-title{
     font-size: 24px;
   }
@@ -138,9 +173,30 @@
   .product_block-description{
     font-size: 16px;
   }
+
+
+  //Contacts
+
+  .contacts{
+    padding-bottom: 70px;
+  }
 }
 
 @media(max-width:328px){
+
+  .navbar-nav{
+    width: 100% !important;
+  }
+
+
+  .navbar-collapse{
+    flex-direction: column;
+  }
+
+  .btn-pricelist{
+    border-radius: 0 0 10px 10px;
+  }
+
   .ben-item{
     width: 100%;
     &:nth-child(-n+3){

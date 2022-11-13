@@ -27,6 +27,7 @@ body {
   font-size: 25px;
   color: #000;
   position: relative;
+  overflow-x: hidden;
 }
 
 .no-scroll {
@@ -142,7 +143,7 @@ body {
   width: 100%;
   height: 100vh;
   max-height: 1500px;
-  background: url("../img/gears-solid.svg") no-repeat right -350px bottom -350px;
+  position: relative;
 }
 
 .intro-basis {
@@ -153,7 +154,7 @@ body {
 .intro-title {
   font-family: "Oswald";
   font-size: 60px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .intro-subtitle {
@@ -164,10 +165,60 @@ body {
 }
 
 .img-intro {
+  display: none;
+  z-index: 5;
   width: 700px;
   position: absolute;
   right: 0;
   bottom: 60px;
+}
+
+.intro-background {
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.slider--intro_text {
+  height: auto;
+  width: 300px;
+  pointer-events: none;
+}
+
+.intro-basis {
+  position: relative;
+}
+
+.slider--intro_images {
+  width: 50%;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  z-index: 10;
+  margin: auto 0;
+  pointer-events: none;
+}
+
+.slider--intro_images::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
+.slider--intro_images::before {
+  left: 0;
+  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+}
+
+.slider--intro_image {
+  width: 90%;
+  height: auto;
 }
 
 .about {
@@ -265,33 +316,56 @@ body {
   color: #fff;
 }
 
-.review {
-  background-color: rgb(211, 226, 217);
-  border-radius: 5px;
-  padding-bottom: 15px;
-}
-
 .reviews {
   padding-bottom: 100px;
   padding-top: 100px;
-  background: url("../img/star-half.svg") no-repeat bottom 50px left;
+  background: url("../img/star-half.svg") no-repeat left;
+}
+
+.review {
+  background-color: #EDEDED;
+  border-radius: 5px;
+  padding-bottom: 15px;
+  border: 1px solid #000;
+  position: relative;
+  padding-top: 50px;
+}
+
+.review_photo {
+  width: 70%;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-left: 0;
+  margin-top: -100px;
+  margin-bottom: 10px;
 }
 
 .splitter {
   margin-top: 10px;
   margin-bottom: 10px;
   width: 80%;
-  height: 4px;
-  background-color: rgb(170, 170, 170);
+  height: 2px;
+  background-color: #1A512E;
+  opacity: 0.4;
+  border-radius: 2px;
 }
 
 .review_name {
-  font-size: 30px;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px;
 }
 
 .review_description, .review_content {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 200;
+}
+
+.review_content {
+  font-weight: 300;
+  font-size: 18px;
 }
 
 .btn-reviews {
@@ -479,6 +553,11 @@ body {
   .intro {
     padding-top: 130px;
   }
+  .intro-background {
+    width: 50%;
+    right: 0;
+    top: 0;
+  }
 }
 @media (max-width: 991px) {
   .navbar-collapse {
@@ -512,6 +591,9 @@ body {
   .navbar-nav:nth-child(2) {
     width: 50%;
   }
+  .form-header {
+    border-radius: 0;
+  }
   .intro {
     padding-top: 100px;
   }
@@ -524,11 +606,22 @@ body {
   .about_form {
     margin-top: 0;
   }
+  .reviews {
+    background-size: 100% auto;
+    background-position: left 0 bottom 50%;
+  }
+  .contacts {
+    background-size: 110% 110%;
+    background-position: left 10% top 10%;
+  }
   .contacts_description {
     font-size: 20px;
   }
 }
 @media (max-width: 767px) {
+  .intro-background {
+    display: none;
+  }
   .ben-item {
     width: 50%;
     padding-bottom: 30px;
@@ -563,14 +656,31 @@ body {
   .ben-text {
     font-size: 15px;
   }
+  .product-1,
+.product-2 {
+    background-size: 100% auto;
+    background-position: left 0 bottom 0;
+  }
   .product_block-title {
     font-size: 24px;
   }
   .product_block-description {
     font-size: 16px;
   }
+  .contacts {
+    padding-bottom: 70px;
+  }
 }
 @media (max-width: 328px) {
+  .navbar-nav {
+    width: 100% !important;
+  }
+  .navbar-collapse {
+    flex-direction: column;
+  }
+  .btn-pricelist {
+    border-radius: 0 0 10px 10px;
+  }
   .ben-item {
     width: 100%;
   }

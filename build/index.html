@@ -10,6 +10,10 @@ maximum-scale=1.0, user-scalable=no">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald&family=PT+Sans&family=Roboto+Condensed:wght@300;400&family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"/>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
   <link rel="stylesheet" href="css/styles.css">
   <title>Clotek.ru</title>
 </head>
@@ -65,12 +69,51 @@ maximum-scale=1.0, user-scalable=no">
  
   <div class="intro">
   <div class="container intro-basis">
+
     <div class="intro-text">
-      <div class="intro-title">Если вам нужны крылья</div>
+      <div class="intro-title d-flex align-content-start">
+        <div class="intro-title me-3">Если вам нужны</div>
+        <div class="slider--intro_text">
+          <div class="swiper swiper--intro_text">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Крылья</div>
+              <div class="swiper-slide">Подкрылки</div>
+              <div class="swiper-slide">Сани</div>
+              <div class="swiper-slide">Коврики</div>
+              <div class="swiper-slide">Пруды</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="intro-subtitle">Проектирование и производство <br>автокомпонентов <br>И ТОВАРов НАРОДНОГО <br>ПОТРЕБЛЕНИЯ</div>
     </div>
     
-    <img src="./img/kr6.png" alt="" class="img-fluid img-intro">
+    <div class="slider--intro_images">
+      <div class="swiper swiper--intro_images">
+        <div class="swiper-wrapper  align-items-center">
+          <div class="swiper-slide">
+            <img src="./img/sled.png" alt="" class="img img-fluid slider--intro_image">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/fender.png" alt="" class="img img-fluid slider--intro_image">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/sled.png" alt="" class="img img-fluid slider--intro_image">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/fender.png" alt="" class="img img-fluid slider--intro_image">
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/sled.png" alt="" class="img img-fluid slider--intro_image">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  <div class="intro-background">
+    <img src="./img/gears-solid.svg" alt="">
   </div>
 </div>
 
@@ -163,8 +206,10 @@ maximum-scale=1.0, user-scalable=no">
           <div class="ratio ratio-1x1 text-center align-middle" style="background-color: blanchedalmond;"></div>
         </div>
         <div class="col-12 offset-0 mt-3 col-md-6 offset-md-1 mt-md-0 col-lg-5">
-          <div class="product_block-title text-center mb-2">Lorem ipsum</div>
-          <div class="product_block-description p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum suscipit condimentum. Donec porttitor pharetra molestie. In vitae nulla at turpis vestibulum gravida ut auctor sem. Mauris congue quis est eget ultricies. Praesent sit amet fermentum mi. Pellentesque sodales mauris.</div>
+          <div class="product_block-title text-center mb-2">Подкрылки</div>
+          <div class="product_block-description p1">
+            Подкрылки нашего производства отличаются от аналогов высокой стойкостью к износу, а также большой прочностью материала. Благодаря высококачественному сырью и профессиональным методам изготовления, наша продукция не трескается при низких температурах и морозах, но остается эластичной и прочной. А конструкция локкеров, в свою очередь, обеспечивает эффективную защиту кузова.      
+          </div>
           <button class="btn d-block product_more-info gradient mx-auto">Подробнее</button>
         </div>
       </div>
@@ -192,8 +237,10 @@ maximum-scale=1.0, user-scalable=no">
           <div class="ratio ratio-1x1 text-center align-middle" style="background-color: blanchedalmond;"></div>
         </div>
         <div class="col-12 offset-0 mt-3 col-md-6 offset-md-1 mt-md-0 col-lg-5">
-          <div class="product_block-title text-center mb-2">Lorem ipsum</div>
-          <div class="product_block-description p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum suscipit condimentum. Donec porttitor pharetra molestie. In vitae nulla at turpis vestibulum gravida ut auctor sem. Mauris congue quis est eget ultricies. Praesent sit amet fermentum mi. Pellentesque sodales mauris.</div>
+          <div class="product_block-title text-center mb-2">Подкрылки</div>
+          <div class="product_block-description p1">
+            Подкрылки нашего производства отличаются от аналогов высокой стойкостью к износу, а также большой прочностью материала. Благодаря высококачественному сырью и профессиональным методам изготовления, наша продукция не трескается при низких температурах и морозах, но остается эластичной и прочной. А конструкция локкеров, в свою очередь, обеспечивает эффективную защиту кузова.      
+          </div>
           <button class="btn d-block product_more-info gradient mx-auto">Подробнее</button>
         </div>
       </div>
@@ -221,23 +268,30 @@ maximum-scale=1.0, user-scalable=no">
       Отзывы
     </div>
 
-    <div class="row col-10 offset-1 d-flex justify-content-between">
-      <div class="review col-3 d-flex flex-column align-items-center">
-  <div class="mx-auto" style="border-radius: 50%; background-color: #bbb;  width:150px; height:150px; margin-top: -20px;"></div>
+    <div class="slider-reviews">
+      <div class="review col-9 col-sm-5 col-md-3 d-flex flex-column align-items-center">
+  <div class="ratio ratio-1x1 review_photo"></div>
   <div class="review_name">Name Surname</div>
   <div class="review_description">subtitle</div>
   <div class="splitter"></div>
   <div class="review_content text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mi vitae hendrerit malesuada. Aenean porttitor ligula quis.</div>
 </div>
-      <div class="review col-3 d-flex flex-column align-items-center">
-  <div class="mx-auto" style="border-radius: 50%; background-color: #bbb;  width:150px; height:150px; margin-top: -20px;"></div>
+      <div class="review col-9 col-sm-5 col-md-3 d-flex flex-column align-items-center">
+  <div class="ratio ratio-1x1 review_photo"></div>
   <div class="review_name">Name Surname</div>
   <div class="review_description">subtitle</div>
   <div class="splitter"></div>
   <div class="review_content text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mi vitae hendrerit malesuada. Aenean porttitor ligula quis.</div>
 </div>
-      <div class="review col-3 d-flex flex-column align-items-center">
-  <div class="mx-auto" style="border-radius: 50%; background-color: #bbb;  width:150px; height:150px; margin-top: -20px;"></div>
+      <div class="review col-9 col-sm-5 col-md-3 d-flex flex-column align-items-center">
+  <div class="ratio ratio-1x1 review_photo"></div>
+  <div class="review_name">Name Surname</div>
+  <div class="review_description">subtitle</div>
+  <div class="splitter"></div>
+  <div class="review_content text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mi vitae hendrerit malesuada. Aenean porttitor ligula quis.</div>
+</div>
+      <div class="review col-9 col-sm-5 col-md-3 d-flex flex-column align-items-center">
+  <div class="ratio ratio-1x1 review_photo"></div>
   <div class="review_name">Name Surname</div>
   <div class="review_description">subtitle</div>
   <div class="splitter"></div>
@@ -326,6 +380,9 @@ Nulla consectetur aliquet diam, sit amet rutrum metus tempus at. Etiam maximus, 
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js"></script>
 
 <script src="js/scripts.js"></script>
 </body>
