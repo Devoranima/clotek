@@ -58,6 +58,56 @@
   font-weight: 400;
 }
 
-.slick-track{
-  overflow: visible;
+.slider-reviews{
+  .slick-list{
+    padding: 50px 0;
+  }
+  
+  
+  .slick-slide {
+    margin: 0 100px;
+  }
+  
+  
+  .slick-list {
+    margin: 0 -100px;
+  }
+  
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 1rem 0;
+	
+	list-style-type: none;
+	
+		li {
+			margin: 0 0.25rem;
+		}
+	
+		button {
+			display: block;
+			width: 0.75rem;
+			height: 0.75rem;
+			padding: 0;
+			
+			border: none;
+			border-radius: 50%;
+			background: #888888;
+			
+			color:transparent;
+      font-size: 0;
+
+      cursor: pointer;
+
+      transition: background .2s linear, box-shadow .2s linear; 
+		}
+	
+		li.slick-active button {
+      box-shadow: 0 0 0 5px rgba($main-color, .1);
+      background: rgba($main-color, .8);
+		}
+	
 }

@@ -225,7 +225,7 @@ body{
 
 .slider--intro_text{
   height: auto;
-  width: 300px;
+  width: 260px;
   pointer-events: none;
 }
 
@@ -253,12 +253,11 @@ body{
     top:0;
     z-index: 3;
 
-}
-
-.slider--intro_images::before{
     left:0;
     background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
 }
+
+
 
 .slider--intro_image{
   width: 90%;
@@ -362,6 +361,12 @@ body{
   background: url("../img/auto.svg") no-repeat right 100px bottom -1px, $main-color;
   color: #fff;
 }
+
+.product__slider{
+  .slick-dots{
+    margin-top: 20px;
+  }
+}
 .reviews{
   padding-bottom: 100px;
   padding-top: 100px;
@@ -420,6 +425,60 @@ body{
   padding: 15px 70px;
   font-size: 30px;
   font-weight: 400;
+}
+
+.slider-reviews{
+  .slick-list{
+    padding: 50px 0;
+  }
+  
+  
+  .slick-slide {
+    margin: 0 100px;
+  }
+  
+  
+  .slick-list {
+    margin: 0 -100px;
+  }
+  
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 1rem 0;
+	
+	list-style-type: none;
+	
+		li {
+			margin: 0 0.25rem;
+		}
+	
+		button {
+			display: block;
+			width: 0.75rem;
+			height: 0.75rem;
+			padding: 0;
+			
+			border: none;
+			border-radius: 50%;
+			background: #888888;
+			
+			color:transparent;
+      font-size: 0;
+
+      cursor: pointer;
+
+      transition: background .2s linear, box-shadow .2s linear; 
+		}
+	
+		li.slick-active button {
+      box-shadow: 0 0 0 5px rgba($main-color, .1);
+      background: rgba($main-color, .8);
+		}
+	
 }
 .contacts{
   background:  url("../img/map.svg") no-repeat bottom -200px right -380px, $main-color;
@@ -616,6 +675,29 @@ body{
     top:0;
   }
 
+  .slider--intro_images{
+    bottom:5%;
+    right:5%;
+  }
+
+  .slider--intro_images::before{
+    display: none;
+  }
+
+  .slider-reviews{
+
+    .slick-slide {
+      margin: 0 70px;
+    }
+    
+    
+    .slick-list {
+      margin: 0 -70px;
+    }
+    
+  }
+  
+
 }
 
 
@@ -656,6 +738,17 @@ body{
     }
   }
 
+
+  //Intro
+
+  .slider--intro_images{
+    bottom:5%;
+    right:5%;
+    width: 70%;
+  }
+
+
+
   //Form
 
   .form-header{
@@ -669,12 +762,13 @@ body{
   }
 
   .intro-title{
-    font-size:50px;
+    font-size:45px;
   }
 
   .intro-subtitle{
     font-size: 23px;
   }
+
 
 
   //Form
@@ -691,6 +785,18 @@ body{
     background-position: left 0 bottom 50%;
   }
 
+  .slider-reviews{
+    
+    .slick-slide {
+      margin: 0 40px;
+    }
+    
+    
+    .slick-list {
+      margin: 0 -40px;
+    }
+    
+  }
 
   //Contacts
 
@@ -707,9 +813,33 @@ body{
 
 @media(max-width:767px){
   //Intro
+
+  .intro-subtitle{
+    font-weight: 200;
+  }
+
+  .slider--intro_text{
+    width: 220px;
+  }
+
   .intro-background{
     display: none;
   }
+
+  .slider--intro_images{
+    bottom:5%;
+    right:10%;
+    width: 80%;
+    .swiper-slide{
+      display: flex;
+    }
+  }
+
+  .slider--intro_image{
+    margin: 0 auto;
+  }
+
+
 
   //Benefits
 
@@ -747,13 +877,24 @@ body{
   //Intro
 
   .intro-title{
-    font-size: 40px;
+    font-size: 35px;
+  }
+
+  .slider--intro_text{
+    width: 155px;
   }
 
   .intro-subtitle{
-    font-size: 20px;
+    font-size: 16px;
   }
   
+  .slider--intro_images{
+    bottom:30px;
+    right:0;
+    width: 100%;
+    
+  }
+
   //About
 
   .about-description{
@@ -782,6 +923,14 @@ body{
   }
 
 
+  //reviews
+
+  .slider-reviews{
+    
+    padding: 0 40px;
+    
+  }
+
   //Contacts
 
   .contacts{
@@ -809,5 +958,16 @@ body{
     &:nth-child(-n+3){
       padding-bottom: 30px;
     }
+  }
+}
+
+
+
+
+@media (max-height: 600px){
+  .slider--intro_images{
+    bottom:0;
+    right:0;
+    width: 40%;
   }
 }

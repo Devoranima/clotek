@@ -33,22 +33,38 @@ $(document).ready(function(){
   sliderIntro_text.on('slideChange', ()=>{sliderIntro_image.slideNext()});
 
 
+  //Product slider
+
+
+  $('.product__slider').slick({
+    infinite:true,
+    arrows: false,
+    autoplay:true,
+    dots:true,
+    autoplaySpeed: 3000
+  })
+
 
   //Slider reviews
   $('.slider-reviews').slick({
     navigation: false,
     arrows: false,
-    autoplay: false,
-    autoplaySpeed: 1000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     infinite: true,
-    speed: 500,
     slidesToShow: 3,
+    dots:true,
     responsive:[
       {
-        breakpoint: 1000,
+        breakpoint: 755,
         settings:{
-          slidesToShow:3,
-          infinite: true
+          slidesToShow:2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings:{
+          slidesToShow: 1
         }
       }
     ]

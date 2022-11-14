@@ -32,3 +32,9 @@
   background: url("../img/auto.svg") no-repeat right 100px bottom -1px, $main-color;
   color: #fff;
 }
+
+.product__slider{
+  .slick-dots{
+    margin-top: 20px;
+  }
+}

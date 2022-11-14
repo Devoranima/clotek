@@ -9,6 +9,29 @@
     top:0;
   }
 
+  .slider--intro_images{
+    bottom:5%;
+    right:5%;
+  }
+
+  .slider--intro_images::before{
+    display: none;
+  }
+
+  .slider-reviews{
+
+    .slick-slide {
+      margin: 0 70px;
+    }
+    
+    
+    .slick-list {
+      margin: 0 -70px;
+    }
+    
+  }
+  
+
 }
 
 
@@ -49,6 +72,17 @@
     }
   }
 
+
+  //Intro
+
+  .slider--intro_images{
+    bottom:5%;
+    right:5%;
+    width: 70%;
+  }
+
+
+
   //Form
 
   .form-header{
@@ -62,12 +96,13 @@
   }
 
   .intro-title{
-    font-size:50px;
+    font-size:45px;
   }
 
   .intro-subtitle{
     font-size: 23px;
   }
+
 
 
   //Form
@@ -84,6 +119,18 @@
     background-position: left 0 bottom 50%;
   }
 
+  .slider-reviews{
+    
+    .slick-slide {
+      margin: 0 40px;
+    }
+    
+    
+    .slick-list {
+      margin: 0 -40px;
+    }
+    
+  }
 
   //Contacts
 
@@ -100,9 +147,33 @@
 
 @media(max-width:767px){
   //Intro
+
+  .intro-subtitle{
+    font-weight: 200;
+  }
+
+  .slider--intro_text{
+    width: 220px;
+  }
+
   .intro-background{
     display: none;
   }
+
+  .slider--intro_images{
+    bottom:5%;
+    right:10%;
+    width: 80%;
+    .swiper-slide{
+      display: flex;
+    }
+  }
+
+  .slider--intro_image{
+    margin: 0 auto;
+  }
+
+
 
   //Benefits
 
@@ -140,13 +211,24 @@
   //Intro
 
   .intro-title{
-    font-size: 40px;
+    font-size: 35px;
+  }
+
+  .slider--intro_text{
+    width: 155px;
   }
 
   .intro-subtitle{
-    font-size: 20px;
+    font-size: 16px;
   }
   
+  .slider--intro_images{
+    bottom:30px;
+    right:0;
+    width: 100%;
+    
+  }
+
   //About
 
   .about-description{
@@ -175,6 +257,14 @@
   }
 
 
+  //reviews
+
+  .slider-reviews{
+    
+    padding: 0 40px;
+    
+  }
+
   //Contacts
 
   .contacts{
@@ -202,5 +292,16 @@
     &:nth-child(-n+3){
       padding-bottom: 30px;
     }
+  }
+}
+
+
+
+
+@media (max-height: 600px){
+  .slider--intro_images{
+    bottom:0;
+    right:0;
+    width: 40%;
   }
 }

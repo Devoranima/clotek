@@ -55,7 +55,7 @@
 
 .slider--intro_text{
   height: auto;
-  width: 300px;
+  width: 260px;
   pointer-events: none;
 }
 
@@ -83,12 +83,11 @@
     top:0;
     z-index: 3;
 
-}
-
-.slider--intro_images::before{
     left:0;
     background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
 }
+
+
 
 .slider--intro_image{
   width: 90%;
