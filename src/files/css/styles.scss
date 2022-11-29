@@ -169,6 +169,110 @@ body{
 
 
 .intro{
+  padding-top: 70px !important;
+  width: 100%;
+  height:100vh;
+  max-height:1500px;
+  position: relative;
+  //background: url("../img/gears-solid.svg") no-repeat right -350px bottom -350px;
+}
+
+.intro-basis{
+  position: relative;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.intro-title{
+  font-family: 'Oswald';
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.intro-subtitle{
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.img-intro{
+  display: none;
+  z-index: 5;
+  width: 700px;
+  position: absolute;
+
+  right:0;
+  bottom: 60px;
+}
+
+.intro-background{
+
+  z-index: 2;
+  position: absolute;
+  right:0;
+  top:0;
+  pointer-events: none;
+}
+
+
+
+
+// Swiper intro
+
+.slider--intro_text{
+  height: auto;
+  width: 260px;
+  pointer-events: none;
+}
+
+.intro-basis{
+  position: relative;
+}
+
+.slider--intro_images{
+  margin-left: auto; 
+  margin-right: 0;
+  width: 60%;
+  
+  z-index: 10;
+  //margin: auto 0;
+  pointer-events: none;
+}
+
+.slider--intro_images::before{
+    content:"";
+    display: none;
+    width:6px;
+    height:100%;
+
+    position:absolute;
+    top:0;
+    z-index: 3;
+
+    left:0;
+    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+}
+
+
+
+.slider--intro_image{
+  display: block;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+
+
+
+/*
+.intro{
   padding-top: 160px;
   width: 100%;
   height:100vh;
@@ -263,6 +367,7 @@ body{
   width: 90%;
   height: auto;
 }
+*/
 
 .about{
   background-color: $main-color;
@@ -381,7 +486,8 @@ body{
   padding-bottom: 15px;
   border: 1px solid #000;
   position: relative;
-  padding-top: 50px;
+  padding: 50px 10px 10px;
+  
 }
 
 .review_photo{
@@ -439,7 +545,7 @@ body{
   
   
   .slick-list {
-    margin: 0 -100px;
+    margin: 0 0px;
   }
   
 }
@@ -496,7 +602,7 @@ body{
 
 .contacts_content{
   padding: 15px;
-  background-color: #D9D9D9;
+  background-color: #ffffff;
 }
 
 .contacts_title{
@@ -608,6 +714,7 @@ body{
 }
 .modal{
   display: none;
+
   position: fixed;
   top:0;
   left:0;
@@ -624,11 +731,22 @@ body{
   display: flex;
   justify-content: center;
   min-height: 100%;
+
+}
+
+.modal_content{
+  margin: auto;
+
+  position: relative;
+
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all .2s ease-out;
 }
 
 .form_modal{
   align-self: center;
-  max-width: 500px;
+  max-width: 450px;
   border-radius: 0;
   position: relative;
   &>.form-header{
@@ -664,6 +782,21 @@ body{
   color:$main-color;
   padding: 36px;
 }
+@media(max-width:1399px){
+  .slider-reviews{
+ 
+    .slick-slide {
+      margin: 0 60px;
+    }
+    
+    
+    .slick-list {
+      margin: 0 0px;
+    }
+    
+  }
+}
+
 @media(max-width: 1199px){
   .intro{
     padding-top: 130px;
@@ -675,24 +808,19 @@ body{
     top:0;
   }
 
-  .slider--intro_images{
-    bottom:5%;
-    right:5%;
-  }
-
   .slider--intro_images::before{
     display: none;
   }
 
   .slider-reviews{
-
+    
     .slick-slide {
-      margin: 0 70px;
+      margin: 0 40px;
     }
     
     
     .slick-list {
-      margin: 0 -70px;
+      margin: 0 0px;
     }
     
   }
@@ -741,10 +869,12 @@ body{
 
   //Intro
 
+  .intro-basis{
+    justify-content: space-evenly;
+  }
+
   .slider--intro_images{
-    bottom:5%;
-    right:5%;
-    width: 70%;
+    width: 75%;
   }
 
 
@@ -773,11 +903,27 @@ body{
 
   //Form
 
-
   .about_form{
     margin-top: 0;
   }
+
+  //About
+
+  .about-description{
+    font-size: 26px;
+  }
+
+
+  //Product
   
+  .product_block-description{
+    text-align: center !important;
+  }
+
+  .row.prod{
+    flex-direction: column-reverse;
+  }
+
   //Reviews
 
   .reviews{
@@ -788,16 +934,15 @@ body{
   .slider-reviews{
     
     .slick-slide {
-      margin: 0 40px;
+      margin: 0 20px;
     }
     
     
     .slick-list {
-      margin: 0 -40px;
+      margin: 0 -20px;
     }
     
   }
-
   //Contacts
 
   .contacts{
@@ -827,9 +972,7 @@ body{
   }
 
   .slider--intro_images{
-    bottom:5%;
-    right:10%;
-    width: 80%;
+    width: 100%;
     .swiper-slide{
       display: flex;
     }
@@ -840,6 +983,11 @@ body{
   }
 
 
+  //About
+
+  .about-description{
+    font-size: 22px;
+  }
 
   //Benefits
 
@@ -863,9 +1011,6 @@ body{
     text-align: center !important;
   }
 
-  .row.prod{
-    flex-direction: column-reverse;
-  }
 }
 
 @media(max-width: 577px){
@@ -877,15 +1022,17 @@ body{
   //Intro
 
   .intro-title{
-    font-size: 35px;
+    font-size: 40px;
   }
 
   .slider--intro_text{
-    width: 155px;
+    width: 180px;
   }
 
   .intro-subtitle{
-    font-size: 16px;
+    text-align: right;
+    margin-top: 10px;
+    font-size: 20px;
   }
   
   .slider--intro_images{
@@ -915,11 +1062,15 @@ body{
   }
 
   .product_block-title{
-    font-size: 24px;
+    font-size: 28px;
+
   }
 
   .product_block-description{
     font-size: 16px;
+    >span{
+      display: none;
+    }
   }
 
 
@@ -927,7 +1078,9 @@ body{
 
   .slider-reviews{
     
-    padding: 0 40px;
+    .slick-list {
+      margin: 0 100px;
+    }
     
   }
 
@@ -936,6 +1089,64 @@ body{
   .contacts{
     padding-bottom: 70px;
   }
+}
+
+@media(max-width:476px){
+    //Intro
+
+    .intro-basis{
+      justify-content: space-around;
+    }
+
+    .intro-text{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .intro-title{
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 36px;
+      
+    }
+
+  
+    .slider--intro_text{
+      width: 160px;
+      text-align: left;
+    }
+  
+    .intro-subtitle{
+      text-align: right;
+      margin-top: 10px;
+      font-size: 17px;
+    }
+
+
+
+    //About us
+
+    .about-description{
+      font-size: 16px;
+    }
+
+    //reviews
+
+    .review_content{
+      font-size: 16px;
+    }
+
+    .slider-reviews{
+      
+      .slick-list {
+        margin: 0 40px;
+      }
+      
+    }
+
+    .btn-reviews{
+      font-size: 20px;
+    }
 }
 
 @media(max-width:328px){
@@ -959,15 +1170,31 @@ body{
       padding-bottom: 30px;
     }
   }
+
+
+  //Reviews
+
+
+  .slider-reviews{
+    
+    .slick-list {
+      margin: 0 ;
+    }
+    
+  }
+
+  .btn-reviews{
+    padding: 15px 30px;
+  }
 }
 
 
 
 
-@media (max-height: 600px){
+/*@media (max-height: 600px){
   .slider--intro_images{
     bottom:0;
     right:0;
     width: 40%;
   }
-}
+}*/
