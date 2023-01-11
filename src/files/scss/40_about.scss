@@ -1,16 +1,15 @@
 
 .about{
-  background-color: $main-color;
   color: #fff;
-  padding-bottom: 30px;
+  //padding-bottom: 30px;
   position: relative;
-  &::after{
-    display: block;
-    position: absolute;
-    content: url("../img/angle-double-down.svg");
-    left: -400px;
-    top:-400px;
-  }
+  
+  background: $main-color url("../img/angle-double-down.svg") no-repeat left -400px top 0;
+  
+}
+
+.about--medium{
+  display: none;
 }
 
 .about-brand{
@@ -27,6 +26,13 @@
     font-weight: 400;
   }
 }
+
+.about_svg.top{
+  display: block;
+}
+
+
+//Benefits
 
 .benefits{
   background-color: #fff;
@@ -50,12 +56,18 @@
 }
 
 .ben-icon{
-  width: 90px;
-  height: 90px;
-  background-color: #ccc;
-  border-radius: 50%;
+  width: 100px;
   margin-bottom: 20px;
+  transition: .3s all;
+  &:hover{
+     scale: 1.15;
+  }
+  img{
+    width: 100%;
+    display: block;
+  }
 }
+
 
 .ben-text{
   font-size: 20px;

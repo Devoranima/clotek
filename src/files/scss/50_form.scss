@@ -1,6 +1,5 @@
 .request-form{
   z-index: 50;
-  background-color: #ECECEC;
   border-radius: 10px 10px 5px 5px;
   height: auto;
   align-self:flex-start;
@@ -36,6 +35,7 @@
 
 
 .form-content{
+  background-color: #ECECEC;
   padding: 30px 15px 10px;
 }
 
@@ -70,13 +70,14 @@
   background: url("../img/call.svg") left 10px top 5px no-repeat;
 }
 
+
 .input-textarea{
-  background: url("../img/message.svg") left 10px top 10px no-repeat;
-  resize: vertical;
+  background: url("../img/message.svg") left 10px top 5px no-repeat;
+  resize: none;
   min-height: 1em;
   max-height: 10em;
-  overflow: auto;
 }
+
 
 .btn-form-submit{
   font-size: 28px;

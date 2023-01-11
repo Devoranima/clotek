@@ -1,6 +1,8 @@
 $main-color:#1A512E;
 $second-color:#970009;
 
+
+
 .gradient{
   background-image: linear-gradient(to right, #970009, #DF0113);
   transition: all .2s linear;
@@ -45,7 +47,10 @@ body{
 
 .section{
   margin-bottom: 100px;
-  &.prod{
+  &.products{
+    margin-bottom: 0;
+  }
+  &.aboutSection{
     margin-bottom: 0;
   }
 }
@@ -174,7 +179,7 @@ body{
   height:100vh;
   max-height:1500px;
   position: relative;
-  //background: url("../img/gears-solid.svg") no-repeat right -350px bottom -350px;
+  background: url("../img/gears-solid.svg") no-repeat right 0 top 0;
 }
 
 .intro-basis{
@@ -210,14 +215,15 @@ body{
   bottom: 60px;
 }
 
+/*
 .intro-background{
-
   z-index: 2;
   position: absolute;
   right:0;
   top:0;
   pointer-events: none;
 }
+*/
 
 
 
@@ -370,17 +376,16 @@ body{
 */
 
 .about{
-  background-color: $main-color;
   color: #fff;
-  padding-bottom: 30px;
+  //padding-bottom: 30px;
   position: relative;
-  &::after{
-    display: block;
-    position: absolute;
-    content: url("../img/angle-double-down.svg");
-    left: -400px;
-    top:-400px;
-  }
+  
+  background: $main-color url("../img/angle-double-down.svg") no-repeat left -400px top 0;
+  
+}
+
+.about--medium{
+  display: none;
 }
 
 .about-brand{
@@ -397,6 +402,13 @@ body{
     font-weight: 400;
   }
 }
+
+.about_svg.top{
+  display: block;
+}
+
+
+//Benefits
 
 .benefits{
   background-color: #fff;
@@ -420,18 +432,27 @@ body{
 }
 
 .ben-icon{
-  width: 90px;
-  height: 90px;
-  background-color: #ccc;
-  border-radius: 50%;
+  width: 100px;
   margin-bottom: 20px;
+  transition: .3s all;
+  &:hover{
+     scale: 1.15;
+  }
+  img{
+    width: 100%;
+    display: block;
+  }
 }
+
 
 .ben-text{
   font-size: 20px;
   color: #000;
   text-align: center;
 }
+
+
+
 .product_block-title{
   font-size: 40px;
 }
@@ -442,6 +463,7 @@ body{
 
 .product_block-description{
   margin-bottom: 30px;
+  font-weight: 200;
   &.p1{
     text-align: right;
   }
@@ -471,7 +493,57 @@ body{
   .slick-dots{
     margin-top: 20px;
   }
+
 }
+
+.accordion{
+  display: none;
+}
+
+.accordion-item{
+  border: none;
+}
+
+.accordion-button:focus{
+  box-shadow: none !important;
+}
+
+.accordion-button{
+
+  background-color: rgba($main-color, .1);
+
+  &:not(.collapsed){
+    color: #fff;
+    background-color: rgba($main-color, .85);
+    &::after{
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      transform: rotate(180deg);
+    }
+  }
+
+  &.licht{
+    background-color: #fff;
+    &:not(.collapsed){
+      background-color: rgba($main-color, .8);
+    }
+  }
+}
+
+
+.slider_white{
+  .slick-dots{
+    button{
+      background: rgba(#fff, 0.3);
+
+    }
+    li.slick-active button {
+      box-shadow: 0 0 0 5px rgba(#fff, .6);
+      background: rgba(#fff, 1);
+		}
+  }
+}
+
+
 .reviews{
   padding-bottom: 100px;
   padding-top: 100px;
@@ -614,7 +686,6 @@ body{
 //машинка
 .request-form{
   z-index: 50;
-  background-color: #ECECEC;
   border-radius: 10px 10px 5px 5px;
   height: auto;
   align-self:flex-start;
@@ -650,6 +721,7 @@ body{
 
 
 .form-content{
+  background-color: #ECECEC;
   padding: 30px 15px 10px;
 }
 
@@ -684,13 +756,14 @@ body{
   background: url("../img/call.svg") left 10px top 5px no-repeat;
 }
 
+
 .input-textarea{
-  background: url("../img/message.svg") left 10px top 10px no-repeat;
-  resize: vertical;
+  background: url("../img/message.svg") left 10px top 5px no-repeat;
+  resize: none;
   min-height: 1em;
   max-height: 10em;
-  overflow: auto;
 }
+
 
 .btn-form-submit{
   font-size: 28px;
@@ -812,6 +885,23 @@ body{
     display: none;
   }
 
+
+  //About
+
+  .about-description{
+    font-size: 25px;
+  }
+
+
+  //Products
+
+  .product_block-description{
+    font-size: 21px;
+  }
+
+
+  //Reviews
+
   .slider-reviews{
     
     .slick-slide {
@@ -869,6 +959,22 @@ body{
 
   //Intro
 
+  .intro{
+    padding-top: 100px;
+  }
+
+  .intro-title{
+    font-size:45px;
+  }
+
+  .intro-subtitle{
+    font-size: 23px;
+  }
+
+  .intro-background{
+    display: none;
+  }
+
   .intro-basis{
     justify-content: space-evenly;
   }
@@ -882,37 +988,51 @@ body{
   //Form
 
   .form-header{
-    border-radius: 0; 
+    //border: 3px solid #fff; 
+    //border-radius: 0;
   }
-
-  //Intro
-
-  .intro{
-    padding-top: 100px;
-  }
-
-  .intro-title{
-    font-size:45px;
-  }
-
-  .intro-subtitle{
-    font-size: 23px;
-  }
-
-
-
-  //Form
 
   .about_form{
-    margin-top: 0;
+    //margin-top: 0;
   }
 
+  
   //About
+
+  .about{
+    background-position: center;
+  }
+
+  .about--medium{
+    display: block;
+    margin-top: 100px;
+    .about-description{
+      font-size: 20px;
+    }
+  }
+
+  .about-text{
+    display: flex;
+    flex-direction: row;
+    .about-brand{
+      display: none;
+    }
+    
+  }
 
   .about-description{
     font-size: 26px;
+    span{
+      display: none;
+    }
   }
 
+
+  .about_svg{
+    &.top{
+      display: block;
+    }
+  }
 
   //Product
   
@@ -929,6 +1049,10 @@ body{
   .reviews{
     background-size: 100% auto;
     background-position: left 0 bottom 50%;
+  }
+
+  .review {
+    padding: 50px 15px 15px;
   }
 
   .slider-reviews{
@@ -951,7 +1075,7 @@ body{
   }
 
   .contacts_description{
-    font-size: 20px;
+    font-size: 18px;
   }
 
 }
@@ -965,10 +1089,6 @@ body{
 
   .slider--intro_text{
     width: 220px;
-  }
-
-  .intro-background{
-    display: none;
   }
 
   .slider--intro_images{
@@ -985,8 +1105,12 @@ body{
 
   //About
 
+  .about--medium{
+    display: none;
+  }
+
   .about-description{
-    font-size: 22px;
+    font-size: 20px;
   }
 
   //Benefits
@@ -1002,6 +1126,10 @@ body{
 
   //Products
 
+  .product__slider{
+    padding: 40px 0 20px;
+  }
+
   .product{
     padding:50px;
   }
@@ -1009,8 +1137,40 @@ body{
   .product_block-description{
     font-size: 20px;
     text-align: center !important;
+    margin-bottom: 20px;
   }
 
+  .product_block-title.main{
+    display: none;
+  }
+
+  .product_text{
+    display: none;
+    background: rgba($main-color, .04);
+    box-shadow: -20px 20px rgba(0,0,0,.15);
+    padding: 25px;
+  }
+
+  .accordion{
+    display: block;
+  }
+
+  .prod>.product_text{
+    background: rgba(#fff, .07);
+    box-shadow: 20px 20px rgba(#fff,.15);
+    padding: 25px;
+  }
+
+  .product{
+    background-image: none !important;
+  }
+
+
+  //Contacts
+
+  .contacts_description{
+    font-size: 20px;
+  }
 }
 
 @media(max-width: 577px){
@@ -1042,10 +1202,36 @@ body{
     
   }
 
+  //Form
+
+  .form-title{
+    font-weight: 700;
+    font-size: 24px;
+  }
+  
+  .form-subtitle{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1;
+  }
+  
+  
+  .form-group{
+    >input::placeholder {
+      font-size: 16px;
+    }
+    
+    >textarea::placeholder{
+      font-size: 16px;
+    }
+  }
+
+  
+
   //About
 
   .about-description{
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .ben-text{
@@ -1067,7 +1253,7 @@ body{
   }
 
   .product_block-description{
-    font-size: 16px;
+    font-size: 18px;
     >span{
       display: none;
     }
@@ -1088,6 +1274,10 @@ body{
 
   .contacts{
     padding-bottom: 70px;
+  }
+
+  .contacts_description{
+    font-size: 18px;
   }
 }
 
@@ -1187,14 +1377,3 @@ body{
     padding: 15px 30px;
   }
 }
-
-
-
-
-/*@media (max-height: 600px){
-  .slider--intro_images{
-    bottom:0;
-    right:0;
-    width: 40%;
-  }
-}*/

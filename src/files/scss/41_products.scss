@@ -1,3 +1,5 @@
+
+
 .product_block-title{
   font-size: 40px;
 }
@@ -8,6 +10,7 @@
 
 .product_block-description{
   margin-bottom: 30px;
+  font-weight: 200;
   &.p1{
     text-align: right;
   }
@@ -37,4 +40,53 @@
   .slick-dots{
     margin-top: 20px;
   }
+
 }
+
+.accordion{
+  display: none;
+}
+
+.accordion-item{
+  border: none;
+}
+
+.accordion-button:focus{
+  box-shadow: none !important;
+}
+
+.accordion-button{
+
+  background-color: rgba($main-color, .1);
+
+  &:not(.collapsed){
+    color: #fff;
+    background-color: rgba($main-color, .85);
+    &::after{
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      transform: rotate(180deg);
+    }
+  }
+
+  &.licht{
+    background-color: #fff;
+    &:not(.collapsed){
+      background-color: rgba($main-color, .8);
+    }
+  }
+}
+
+
+.slider_white{
+  .slick-dots{
+    button{
+      background: rgba(#fff, 0.3);
+
+    }
+    li.slick-active button {
+      box-shadow: 0 0 0 5px rgba(#fff, .6);
+      background: rgba(#fff, 1);
+		}
+  }
+}
+

@@ -96,8 +96,6 @@ function sassToCss (){
 function scripts(){
   //Files source
   return gulp.src('./src/files/js/*.js')
-  //Concat
-  .pipe(concat('scripts.js'))
   //Uglification
   .pipe(uglify({
     toplevel:true
@@ -106,6 +104,12 @@ function scripts(){
   .pipe(gulp.dest('./build/js'))
   //Syncronizing files
   .pipe(browserSync.stream());
+}
+
+function php(){
+  return gulp.src('./src/files/php/*.php')
+  .pipe(gulp.dest('./build/php/'))
+  .pipe(browserSync.stream())
 }
 
 function html(){
@@ -152,11 +156,12 @@ function watch () {
   gulp.watch('./src/files/img/**/*.png', img)
   gulp.watch('./src/files/img/**/*.jpg', img)
   gulp.watch('./src/files/img/**/*.svg', img)
+  gulp.watch('./src/files/php/*.php', php)
 
 }
 
 
-const build_foo = gulp.series(clean, sassConcat, html, gulp.parallel(img, sassToCss, scripts));
+const build_foo = gulp.series(clean, sassConcat, html, gulp.parallel(img, sassToCss, scripts, php));
 
 
 

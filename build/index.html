@@ -54,13 +54,13 @@ maximum-scale=1.0, user-scalable=no">
           </li>
         </ul>
         <ul class="navbar-nav">
-          <button type="button" class="btn w100 btn-pricelist gradient">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi bi-tags-fill d-block" viewBox="0 0 16 16">
-            <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-            <path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z"/>
-            </svg>
-            <span>Прайс-лист</span>
-          </button>
+          <a href="./img/map.svg" download="Прайс-лист" style="text-decoration: none;" class="btn w100 btn-pricelist gradient">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi bi-tags-fill d-block" viewBox="0 0 16 16">
+              <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+              <path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z"/>
+              </svg>
+              <span>Прайс-лист</span>
+          </a>
         </ul>
       </div>
     </div>
@@ -92,64 +92,70 @@ maximum-scale=1.0, user-scalable=no">
       <div class="swiper swiper--intro_images">
         <div class="swiper-wrapper  align-items-center">
           <div class="swiper-slide">
-            <img src="./img/sled.png" alt="" class="img img-fluid slider--intro_image">
+            <img src="./img/introSlider/fender.png" alt="" class="img img-fluid slider--intro_image">
           </div>
           <div class="swiper-slide">
-            <img src="./img/fender.png" alt="" class="img img-fluid slider--intro_image">
+            <img src="./img/introSlider/under_fender.png" alt="" class="img img-fluid slider--intro_image">
           </div>
           <div class="swiper-slide">
-            <img src="./img/sled.png" alt="" class="img img-fluid slider--intro_image">
+            <img src="./img/introSlider/sled.png" alt="" class="img img-fluid slider--intro_image">
           </div>
           <div class="swiper-slide">
-            <img src="./img/fender.png" alt="" class="img img-fluid slider--intro_image">
+            <img src="./img/introSlider/fender.png" alt="" class="img img-fluid slider--intro_image">
           </div>
           <div class="swiper-slide">
-            <img src="./img/sled.png" alt="" class="img img-fluid slider--intro_image">
+            <img src="./img/introSlider/sled.png" alt="" class="img img-fluid slider--intro_image">
           </div>
         </div>
       </div>
     </div>
 
-    
   </div>
-  <div class="intro-background">
-    <img src="./img/gears-solid.svg" alt="">
-  </div>
+  
+  
 </div>
 
 
 
-  <div class="section" id="aboutUs">
-  <div class="about">
+  <div class="section aboutSection" id="aboutUs">
+  <div class="about pb-5">
+    
     <div class="container">
       <div class="row">
-        <div class="request-form about_form col-8 offset-2 col-md-6 offset-md-1 col-lg-6 col-xl-4 offset-lg-1 offset-xl-0">
+        <div class="request-form about_form col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-5 offset-lg-0 offset-xl-0 col-xl-4">
   <div class="form-header">
     <button class="btn-close" data-close=""></button>
     <div class="form-title">Оставьте заявку</div>
     <div class="form-subtitle">и наши специалисты свяжутся с вами в ближайшее время!</div>  
   </div>
   <div class="form-content">
-    <form action="/" class="form" method="post">
+    <form action="" class="form" method="post">
       <div class="form-group">
-        <input class="input input-name" type="text" name="" id="" placeholder="Ваше имя">
+        <input class="input input-name" type="text" name="name" id="" placeholder="Ваше имя" required>
       </div>
       <div class="form-group">
-        <input class="input input-tel" type="tel" name="" id="" placeholder="Ваш номер телефона">
+        <input class="input input-tel" type="text" name="num" id="phone" placeholder="Ваш номер телефона" required>
       </div>
       <div class="form-group">
-        <textarea class="input input-textarea" type="text" name="" id="" placeholder="Комментарий (при наличии)"></textarea>
+        <textarea class="input input-textarea" type="text" name="message" id="" placeholder="Ваш вопрос (при наличии)"></textarea>
       </div>
       
-      <button class="btn btn-danger gradient btn-form-submit" type="submit" data-modal="#thanksModal">Позвоните мне!</button>
+      <button class="btn btn-danger gradient btn-form-submit" type="submit" data-modal="#thanksModal" name="submit">Позвоните мне!</button>
     </form>
   </div>
 </div>
-        <div class="col-10 offset-1 col-xl-6 text-center mt-5 about-text offset-xl-1">
+        <div class="about--medium col-md-5 offset-md-1 text-center">
+          <div class="about-brand">Clotek</div>
+          <div class="about-description">
+            Высокое качество, надежные поставки, большой ассортимент... И все сразу!
+          </div>
+        </div>
+        
+        <div class="about-text text-center mt-5 col-10 offset-1 col-sm-12 offset-sm-0 col-md-10 offset-md-1 col-lg-6 col-xl-6 offset-xl-1">
           <div class="about-brand">
             Clotek
           </div>
-          <div class="about-description text-center">
+          <div class="about-description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sem enim, euismod at lacus vel, fermentum tincidunt nisi. Donec ac lectus tempor, dignissim leo sit amet, bibendum felis. Pellentesque condimentum at urna a hendrerit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum malesuada sodales. <br><span>Высокое качество, надежные поставки, большой ассортимент... И все сразу!</span>
           </div>
         </div>
@@ -160,51 +166,52 @@ maximum-scale=1.0, user-scalable=no">
         </div>
         <div class="row">
           <div class="ben-item">
-            <img src="" alt="">
-            <div class="ben-icon"></div>
+            <div class="ben-icon"><img src="./img/quality-medal-svgrepo-com.svg" alt="">  </div> 
             <div class="ben-text">
-              Lorem ipsum dolor sit amet, consectetur
+              Выскокое качество
             </div>
           </div>
           <div class="ben-item">
-            <img src="" alt="">
-            <div class="ben-icon"></div>
+            <div class="ben-icon"><img src="./img/price-tag-svgrepo-com.svg" alt="">
+            </div>      
             <div class="ben-text">
-              Lorem ipsum dolor sit amet, consectetur
+              Низкие цены
             </div>
           </div>
           <div class="ben-item">
-            <img src="" alt="">
-            <div class="ben-icon"></div>
+            <div class="ben-icon"><img src="./img/fast-delivery-svgrepo-com.svg" alt="">  </div> 
             <div class="ben-text">
-              Lorem ipsum dolor sit amet, consectetur
+              Быстрая доставка
             </div>
           </div>
           <div class="ben-item">
-            <img src="" alt="">
-            <div class="ben-icon"></div>
+            <div class="ben-icon">
+              <img src="./img/boxes-svgrepo-com.svg" alt="">
+            </div>
             <div class="ben-text">
-              Lorem ipsum dolor sit amet, consectetur
+              Широкий ассортимент
             </div>
           </div>
   
         </div>
       </div>
     </div>
+    
+  </div>
+  <div style="margin-top: -1px;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1A512E" fill-opacity="1" d="M0,128L0,256L36.9,256L36.9,96L73.8,96L73.8,128L110.8,128L110.8,160L147.7,160L147.7,224L184.6,224L184.6,192L221.5,192L221.5,96L258.5,96L258.5,192L295.4,192L295.4,256L332.3,256L332.3,64L369.2,64L369.2,224L406.2,224L406.2,128L443.1,128L443.1,288L480,288L480,32L516.9,32L516.9,64L553.8,64L553.8,192L590.8,192L590.8,224L627.7,224L627.7,128L664.6,128L664.6,64L701.5,64L701.5,32L738.5,32L738.5,192L775.4,192L775.4,128L812.3,128L812.3,256L849.2,256L849.2,64L886.2,64L886.2,256L923.1,256L923.1,160L960,160L960,192L996.9,192L996.9,64L1033.8,64L1033.8,224L1070.8,224L1070.8,64L1107.7,64L1107.7,128L1144.6,128L1144.6,128L1181.5,128L1181.5,192L1218.5,192L1218.5,128L1255.4,128L1255.4,64L1292.3,64L1292.3,32L1329.2,32L1329.2,256L1366.2,256L1366.2,96L1403.1,96L1403.1,192L1440,192L1440,0L1403.1,0L1403.1,0L1366.2,0L1366.2,0L1329.2,0L1329.2,0L1292.3,0L1292.3,0L1255.4,0L1255.4,0L1218.5,0L1218.5,0L1181.5,0L1181.5,0L1144.6,0L1144.6,0L1107.7,0L1107.7,0L1070.8,0L1070.8,0L1033.8,0L1033.8,0L996.9,0L996.9,0L960,0L960,0L923.1,0L923.1,0L886.2,0L886.2,0L849.2,0L849.2,0L812.3,0L812.3,0L775.4,0L775.4,0L738.5,0L738.5,0L701.5,0L701.5,0L664.6,0L664.6,0L627.7,0L627.7,0L590.8,0L590.8,0L553.8,0L553.8,0L516.9,0L516.9,0L480,0L480,0L443.1,0L443.1,0L406.2,0L406.2,0L369.2,0L369.2,0L332.3,0L332.3,0L295.4,0L295.4,0L258.5,0L258.5,0L221.5,0L221.5,0L184.6,0L184.6,0L147.7,0L147.7,0L110.8,0L110.8,0L73.8,0L73.8,0L36.9,0L36.9,0L0,0L0,0Z"></path></svg>
   </div>
 </div>
 
 
-  <div class="section prod" id="products">
-  <div class="section_title text-center">
-    Наша продукция
-  </div>
+  <div class="section products" id="products">
   
     <div class="product product-1">
     <div class="container">
+      <div class="product_block-title main text-center text-lg-end mb-5 mb-lg-0">Подкрылки</div>
       <div class="row align-items-center">
         
-        <div class="col-12 offset-0 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-5 offset-xl-0 content-center">
+        <div class="col-12 offset-0 col-sm-8 offset-sm-2 col-lg-6 offset-lg-0 col-xl-6 offset-xl-0 content-center">
           <div class="product__slider">
 
             <img src="./img/sled.png" alt="" class="img img-fluid slider--intro_image">
@@ -214,36 +221,75 @@ maximum-scale=1.0, user-scalable=no">
           
         </div>
 
-        <div class="col-12 col-sm-12 offset-0 mt-3 mt-lg-0 col-lg-7 offset-lg-0 col-xl-6 offset-xl-1">
-          <div class="product_block-title text-center mb-2">Подкрылки</div>
+        <div class="col-12 col-sm-12 offset-0 mt-3 mt-lg-0 col-lg-5 offset-lg-1 col-xl-5 offset-xl-1 product_text">
           <div class="product_block-description p1">
-            Наши подкрылки отличаются от аналогов высокой стойкостью к износу и большой прочностью материала. Благодаря высококачественному сырью и профессиональным методам изготовления, наша продукция не трескается при низких температурах, но остается эластичной и прочной. <span>А конструкция, в свою очередь, обеспечивает эффективную защиту кузова.</span>      
+            Наши подкрылки отличаются от аналогов высокой стойкостью к износу и большой прочностью материала. Благодаря высококачественному сырью и профессиональным методам изготовления, наша продукция не трескается при низких температурах, но остается эластичной и прочной. <span>А конструкция, в свою очередь, обеспечивает эффективную защиту кузова</span>      
           </div>
           <button class="btn d-block product_more-info gradient mx-auto">Подробнее</button>
+        </div>
+
+        <div class="accordion" id="accordionUnderWing">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button class="accordion-button product_block-title" type="button" data-bs-toggle="collapse" data-bs-target="#underWing-collapse" aria-expanded="true" aria-controls="underWing-collapse">
+                Подкрылки
+              </button>
+            </h2>
+            <div id="underWing-collapse" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+              <div class="accordion-body">
+                <div class="product_block-description p1"> Наши подкрылки отличаются от аналогов высокой стойкостью к износу и большой прочностью материала. Благодаря высококачественному сырью и профессиональным методам изготовления, наша продукция не трескается при низких температурах, но остается эластичной и прочной. <span>А конструкция, в свою очередь, обеспечивает эффективную защиту кузова</span>
+                </div>
+                <a href="" style="text-decoration: none;"><button class="btn d-block product_more-info gradient mx-auto">Подробнее</button></a>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
   </div>
   <div class="product product-2">
   <div class="container">
+    <div class="product_block-title main text-center text-lg-start mb-5 mb-lg-0">Коврики</div>
     <div class="row prod align-items-center">
-      <div class="col-12 col-sm-12 offset-0 mt-3 mt-lg-0 col-lg-7 offset-lg-0 col-xl-6 offset-xl-0">
-        <div class="product_block-title text-center">Lorem ipsum</div>
-        <div class="product_block-description p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum suscipit condimentum. Donec porttitor pharetra molestie. In vitae nulla at turpis vestibulum gravida ut auctor sem. Mauris congue quis est eget ultricies. Praesent sit amet fermentum mi. Pellentesque sodales mauris.</div>
+      <div class="col-12 col-sm-12 offset-0 mt-3 mt-lg-0 col-lg-5 offset-lg-0 col-xl-5 offset-xl-0 product_text">
+        <div class="product_block-description p2">Коврики нашего производства защищают даже самые скрытые места автомобиля, будучи в два раза легче своих резиновых аналогов. Их конструкция позволяет легко вынимать и возвращать изделие для очистки, а также обеспечивает полное прилегание ковров к багажнику. И не стоит больше беспокоиться за устойчивость грузов, наша продукция обладает специальными противоскользящими паттернами</div>
         <button class="btn d-block product_more-info gradient mx-auto">Подробнее</button>
       </div>
-      <div class="col-12 offset-0 col-sm-8 offset-sm-0 col-lg-5 offset-lg-0 col-xl-5 offset-xl-1 content-center">
-        <div class="ratio ratio-1x1 text-center align-middle" style="background-color: blanchedalmond;">
+      <div class="col-12 offset-0 col-sm-8 offset-sm-0 col-lg-6 offset-lg-1 col-xl-6 offset-xl-1 content-center">
+        <div class="product__slider slider_white">
+
+          <img src="./img/sled.png" alt="" class="img img-fluid slider--intro_image">
+          <img src="./img/fender.png" alt="" class="img img-fluid slider--intro_image">
+        
         </div>
       </div>
+    </div>
+    <div class="accordion" id="accordionMat">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button product_block-title licht" type="button" data-bs-toggle="collapse" data-bs-target="#mat-collapse" aria-expanded="true" aria-controls="mat-collapse">
+            Коврики
+          </button>
+        </h2>
+        <div id="mat-collapse" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+            <div class="product_block-description p1"> Коврики нашего производства защищают даже самые скрытые места автомобиля, будучи в два раза легче своих резиновых аналогов. Их конструкция позволяет легко вынимать и возвращать изделие для очистки, а также обеспечивает полное прилегание ковров к багажнику. И не стоит больше беспокоиться за устойчивость грузов, наша продукция обладает специальными противоскользящими паттернами</span>
+            </div>
+            <a href="" style="text-decoration: none;"><button class="btn d-block product_more-info gradient mx-auto">Подробнее</button></a>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
     <div class="product product-1">
     <div class="container">
+      <div class="product_block-title main text-center text-lg-end mb-5 mb-lg-0">Подкрылки</div>
       <div class="row align-items-center">
         
-        <div class="col-12 offset-0 col-sm-8 offset-sm-2 col-lg-5 offset-lg-0 col-xl-5 offset-xl-0 content-center">
+        <div class="col-12 offset-0 col-sm-8 offset-sm-2 col-lg-6 offset-lg-0 col-xl-6 offset-xl-0 content-center">
           <div class="product__slider">
 
             <img src="./img/sled.png" alt="" class="img img-fluid slider--intro_image">
@@ -253,28 +299,66 @@ maximum-scale=1.0, user-scalable=no">
           
         </div>
 
-        <div class="col-12 col-sm-12 offset-0 mt-3 mt-lg-0 col-lg-7 offset-lg-0 col-xl-6 offset-xl-1">
-          <div class="product_block-title text-center mb-2">Подкрылки</div>
+        <div class="col-12 col-sm-12 offset-0 mt-3 mt-lg-0 col-lg-5 offset-lg-1 col-xl-5 offset-xl-1 product_text">
           <div class="product_block-description p1">
-            Наши подкрылки отличаются от аналогов высокой стойкостью к износу и большой прочностью материала. Благодаря высококачественному сырью и профессиональным методам изготовления, наша продукция не трескается при низких температурах, но остается эластичной и прочной. <span>А конструкция, в свою очередь, обеспечивает эффективную защиту кузова.</span>      
+            Наши подкрылки отличаются от аналогов высокой стойкостью к износу и большой прочностью материала. Благодаря высококачественному сырью и профессиональным методам изготовления, наша продукция не трескается при низких температурах, но остается эластичной и прочной. <span>А конструкция, в свою очередь, обеспечивает эффективную защиту кузова</span>      
           </div>
           <button class="btn d-block product_more-info gradient mx-auto">Подробнее</button>
+        </div>
+
+        <div class="accordion" id="accordionUnderWing">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button class="accordion-button product_block-title" type="button" data-bs-toggle="collapse" data-bs-target="#underWing-collapse" aria-expanded="true" aria-controls="underWing-collapse">
+                Подкрылки
+              </button>
+            </h2>
+            <div id="underWing-collapse" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+              <div class="accordion-body">
+                <div class="product_block-description p1"> Наши подкрылки отличаются от аналогов высокой стойкостью к износу и большой прочностью материала. Благодаря высококачественному сырью и профессиональным методам изготовления, наша продукция не трескается при низких температурах, но остается эластичной и прочной. <span>А конструкция, в свою очередь, обеспечивает эффективную защиту кузова</span>
+                </div>
+                <a href="" style="text-decoration: none;"><button class="btn d-block product_more-info gradient mx-auto">Подробнее</button></a>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
   </div>
   <div class="product product-2">
   <div class="container">
+    <div class="product_block-title main text-center text-lg-start mb-5 mb-lg-0">Коврики</div>
     <div class="row prod align-items-center">
-      <div class="col-12 col-sm-12 offset-0 mt-3 mt-lg-0 col-lg-7 offset-lg-0 col-xl-6 offset-xl-0">
-        <div class="product_block-title text-center">Lorem ipsum</div>
-        <div class="product_block-description p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla interdum suscipit condimentum. Donec porttitor pharetra molestie. In vitae nulla at turpis vestibulum gravida ut auctor sem. Mauris congue quis est eget ultricies. Praesent sit amet fermentum mi. Pellentesque sodales mauris.</div>
+      <div class="col-12 col-sm-12 offset-0 mt-3 mt-lg-0 col-lg-5 offset-lg-0 col-xl-5 offset-xl-0 product_text">
+        <div class="product_block-description p2">Коврики нашего производства защищают даже самые скрытые места автомобиля, будучи в два раза легче своих резиновых аналогов. Их конструкция позволяет легко вынимать и возвращать изделие для очистки, а также обеспечивает полное прилегание ковров к багажнику. И не стоит больше беспокоиться за устойчивость грузов, наша продукция обладает специальными противоскользящими паттернами</div>
         <button class="btn d-block product_more-info gradient mx-auto">Подробнее</button>
       </div>
-      <div class="col-12 offset-0 col-sm-8 offset-sm-0 col-lg-5 offset-lg-0 col-xl-5 offset-xl-1 content-center">
-        <div class="ratio ratio-1x1 text-center align-middle" style="background-color: blanchedalmond;">
+      <div class="col-12 offset-0 col-sm-8 offset-sm-0 col-lg-6 offset-lg-1 col-xl-6 offset-xl-1 content-center">
+        <div class="product__slider slider_white">
+
+          <img src="./img/sled.png" alt="" class="img img-fluid slider--intro_image">
+          <img src="./img/fender.png" alt="" class="img img-fluid slider--intro_image">
+        
         </div>
       </div>
+    </div>
+    <div class="accordion" id="accordionMat">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+          <button class="accordion-button product_block-title licht" type="button" data-bs-toggle="collapse" data-bs-target="#mat-collapse" aria-expanded="true" aria-controls="mat-collapse">
+            Коврики
+          </button>
+        </h2>
+        <div id="mat-collapse" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+          <div class="accordion-body">
+            <div class="product_block-description p1"> Коврики нашего производства защищают даже самые скрытые места автомобиля, будучи в два раза легче своих резиновых аналогов. Их конструкция позволяет легко вынимать и возвращать изделие для очистки, а также обеспечивает полное прилегание ковров к багажнику. И не стоит больше беспокоиться за устойчивость грузов, наша продукция обладает специальными противоскользящими паттернами</span>
+            </div>
+            <a href="" style="text-decoration: none;"><button class="btn d-block product_more-info gradient mx-auto">Подробнее</button></a>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>
@@ -292,28 +376,28 @@ maximum-scale=1.0, user-scalable=no">
   <div class="review_name">Name Surname</div>
   <div class="review_description">subtitle</div>
   <div class="splitter"></div>
-  <div class="review_content text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mi vitae hendrerit malesuada. Aenean porttitor ligula quis.</div>
+  <div class="review_content text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mi vitae hendrerit malesuada. Aenean porttitor ligula quis.</div>
 </div>
       <div class="review col-9 col-sm-5 col-md-3 d-flex flex-column align-items-center">
   <div class="ratio ratio-1x1 review_photo"></div>
   <div class="review_name">Name Surname</div>
   <div class="review_description">subtitle</div>
   <div class="splitter"></div>
-  <div class="review_content text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mi vitae hendrerit malesuada. Aenean porttitor ligula quis.</div>
+  <div class="review_content text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mi vitae hendrerit malesuada. Aenean porttitor ligula quis.</div>
 </div>
       <div class="review col-9 col-sm-5 col-md-3 d-flex flex-column align-items-center">
   <div class="ratio ratio-1x1 review_photo"></div>
   <div class="review_name">Name Surname</div>
   <div class="review_description">subtitle</div>
   <div class="splitter"></div>
-  <div class="review_content text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mi vitae hendrerit malesuada. Aenean porttitor ligula quis.</div>
+  <div class="review_content text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mi vitae hendrerit malesuada. Aenean porttitor ligula quis.</div>
 </div>
       <div class="review col-9 col-sm-5 col-md-3 d-flex flex-column align-items-center">
   <div class="ratio ratio-1x1 review_photo"></div>
   <div class="review_name">Name Surname</div>
   <div class="review_description">subtitle</div>
   <div class="splitter"></div>
-  <div class="review_content text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mi vitae hendrerit malesuada. Aenean porttitor ligula quis.</div>
+  <div class="review_content text-center mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer finibus mi vitae hendrerit malesuada. Aenean porttitor ligula quis.</div>
 </div>
     </div>
 
@@ -363,18 +447,18 @@ Nulla consectetur aliquet diam, sit amet rutrum metus tempus at. Etiam maximus, 
     <div class="form-subtitle">и наши специалисты свяжутся с вами в ближайшее время!</div>  
   </div>
   <div class="form-content">
-    <form action="/" class="form" method="post">
+    <form action="" class="form" method="post">
       <div class="form-group">
-        <input class="input input-name" type="text" name="" id="" placeholder="Ваше имя">
+        <input class="input input-name" type="text" name="name" id="" placeholder="Ваше имя" required>
       </div>
       <div class="form-group">
-        <input class="input input-tel" type="tel" name="" id="" placeholder="Ваш номер телефона">
+        <input class="input input-tel" type="text" name="num" id="phone" placeholder="Ваш номер телефона" required>
       </div>
       <div class="form-group">
-        <textarea class="input input-textarea" type="text" name="" id="" placeholder="Комментарий (при наличии)"></textarea>
+        <textarea class="input input-textarea" type="text" name="message" id="" placeholder="Ваш вопрос (при наличии)"></textarea>
       </div>
       
-      <button class="btn btn-danger gradient btn-form-submit" type="submit" data-modal="#thanksModal">Позвоните мне!</button>
+      <button class="btn btn-danger gradient btn-form-submit" type="submit" data-modal="#thanksModal" name="submit">Позвоните мне!</button>
     </form>
   </div>
 </div>
@@ -406,6 +490,11 @@ Nulla consectetur aliquet diam, sit amet rutrum metus tempus at. Etiam maximus, 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js"></script>
 
-<script src="js/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
+
+<script src="js/autosize.js"></script>
+
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -6,8 +6,6 @@ $(document).ready(function(){
     $('.btn-pricelist').toggleClass('show');
   })
   */
-  let header = $("#header")
-  let headerH = header.innerHeight();
   const $body = $("body");
 
  /*  Smooth scroll to sections  =============================================*/
@@ -19,7 +17,7 @@ $(document).ready(function(){
 
     $("html, body").animate({
         scrollTop: scrollElPos
-    }, 500)
+    }, 400)
   })
 
 
@@ -52,8 +50,8 @@ $(document).ready(function(){
 
    /*  Modal  =============================================*/
 
-   $("[data-modal]").on("click", function(event){
-    event.preventDefault();
+   /*$("[data-modal]").on("click", function(event){
+    //event.preventDefault();
 
     let modal = $(this).data('modal');
 
@@ -66,7 +64,7 @@ $(document).ready(function(){
             opacity: '1'
         });
     })
-  })
+  })*/
 
   function modalClose(){
       $(".modal").each(function(){
@@ -139,6 +137,24 @@ $(document).ready(function(){
       }
     ]
   })
+
+
+  //Mask for phone number
+
+  $('#phone').mask('+7(000)000-00-00');
+  
+  $('textarea').on('input', function () {
+    this.style.height = 'auto';
+      
+    this.style.height = 
+            (this.scrollHeight) + 'px';
+});
+
+
+
+
+
+
 
 
 })

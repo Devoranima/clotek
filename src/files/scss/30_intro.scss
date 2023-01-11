@@ -4,7 +4,7 @@
   height:100vh;
   max-height:1500px;
   position: relative;
-  //background: url("../img/gears-solid.svg") no-repeat right -350px bottom -350px;
+  background: url("../img/gears-solid.svg") no-repeat right 0 top 0;
 }
 
 .intro-basis{
@@ -40,14 +40,15 @@
   bottom: 60px;
 }
 
+/*
 .intro-background{
-
   z-index: 2;
   position: absolute;
   right:0;
   top:0;
   pointer-events: none;
 }
+*/
 
 
 

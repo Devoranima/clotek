@@ -28,6 +28,23 @@
     display: none;
   }
 
+
+  //About
+
+  .about-description{
+    font-size: 25px;
+  }
+
+
+  //Products
+
+  .product_block-description{
+    font-size: 21px;
+  }
+
+
+  //Reviews
+
   .slider-reviews{
     
     .slick-slide {
@@ -85,6 +102,22 @@
 
   //Intro
 
+  .intro{
+    padding-top: 100px;
+  }
+
+  .intro-title{
+    font-size:45px;
+  }
+
+  .intro-subtitle{
+    font-size: 23px;
+  }
+
+  .intro-background{
+    display: none;
+  }
+
   .intro-basis{
     justify-content: space-evenly;
   }
@@ -98,37 +131,51 @@
   //Form
 
   .form-header{
-    border-radius: 0; 
+    //border: 3px solid #fff; 
+    //border-radius: 0;
   }
-
-  //Intro
-
-  .intro{
-    padding-top: 100px;
-  }
-
-  .intro-title{
-    font-size:45px;
-  }
-
-  .intro-subtitle{
-    font-size: 23px;
-  }
-
-
-
-  //Form
 
   .about_form{
-    margin-top: 0;
+    //margin-top: 0;
   }
 
+  
   //About
+
+  .about{
+    background-position: center;
+  }
+
+  .about--medium{
+    display: block;
+    margin-top: 100px;
+    .about-description{
+      font-size: 20px;
+    }
+  }
+
+  .about-text{
+    display: flex;
+    flex-direction: row;
+    .about-brand{
+      display: none;
+    }
+    
+  }
 
   .about-description{
     font-size: 26px;
+    span{
+      display: none;
+    }
   }
 
+
+  .about_svg{
+    &.top{
+      display: block;
+    }
+  }
 
   //Product
   
@@ -145,6 +192,10 @@
   .reviews{
     background-size: 100% auto;
     background-position: left 0 bottom 50%;
+  }
+
+  .review {
+    padding: 50px 15px 15px;
   }
 
   .slider-reviews{
@@ -167,7 +218,7 @@
   }
 
   .contacts_description{
-    font-size: 20px;
+    font-size: 18px;
   }
 
 }
@@ -181,10 +232,6 @@
 
   .slider--intro_text{
     width: 220px;
-  }
-
-  .intro-background{
-    display: none;
   }
 
   .slider--intro_images{
@@ -201,8 +248,12 @@
 
   //About
 
+  .about--medium{
+    display: none;
+  }
+
   .about-description{
-    font-size: 22px;
+    font-size: 20px;
   }
 
   //Benefits
@@ -218,6 +269,10 @@
 
   //Products
 
+  .product__slider{
+    padding: 40px 0 20px;
+  }
+
   .product{
     padding:50px;
   }
@@ -225,8 +280,40 @@
   .product_block-description{
     font-size: 20px;
     text-align: center !important;
+    margin-bottom: 20px;
   }
 
+  .product_block-title.main{
+    display: none;
+  }
+
+  .product_text{
+    display: none;
+    background: rgba($main-color, .04);
+    box-shadow: -20px 20px rgba(0,0,0,.15);
+    padding: 25px;
+  }
+
+  .accordion{
+    display: block;
+  }
+
+  .prod>.product_text{
+    background: rgba(#fff, .07);
+    box-shadow: 20px 20px rgba(#fff,.15);
+    padding: 25px;
+  }
+
+  .product{
+    background-image: none !important;
+  }
+
+
+  //Contacts
+
+  .contacts_description{
+    font-size: 20px;
+  }
 }
 
 @media(max-width: 577px){
@@ -258,10 +345,36 @@
     
   }
 
+  //Form
+
+  .form-title{
+    font-weight: 700;
+    font-size: 24px;
+  }
+  
+  .form-subtitle{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1;
+  }
+  
+  
+  .form-group{
+    >input::placeholder {
+      font-size: 16px;
+    }
+    
+    >textarea::placeholder{
+      font-size: 16px;
+    }
+  }
+
+  
+
   //About
 
   .about-description{
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .ben-text{
@@ -283,7 +396,7 @@
   }
 
   .product_block-description{
-    font-size: 16px;
+    font-size: 18px;
     >span{
       display: none;
     }
@@ -304,6 +417,10 @@
 
   .contacts{
     padding-bottom: 70px;
+  }
+
+  .contacts_description{
+    font-size: 18px;
   }
 }
 
@@ -403,14 +520,3 @@
     padding: 15px 30px;
   }
 }
-
-
-
-
-/*@media (max-height: 600px){
-  .slider--intro_images{
-    bottom:0;
-    right:0;
-    width: 40%;
-  }
-}*/

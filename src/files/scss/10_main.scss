@@ -1,6 +1,8 @@
 $main-color:#1A512E;
 $second-color:#970009;
 
+
+
 .gradient{
   background-image: linear-gradient(to right, #970009, #DF0113);
   transition: all .2s linear;
@@ -45,7 +47,10 @@ body{
 
 .section{
   margin-bottom: 100px;
-  &.prod{
+  &.products{
+    margin-bottom: 0;
+  }
+  &.aboutSection{
     margin-bottom: 0;
   }
 }
