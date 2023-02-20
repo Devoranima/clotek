@@ -13,52 +13,51 @@ const fileInclude = require('gulp-file-include');
 const replace = require('gulp-replace');
 const order = require('gulp-order');
 
-const scssPath = [
-  './src/files/scss/main.scss',
-  './src/files/scss/!(main|media).scss',
-  './src/files/scss/media.scss'
-]
+//const scssPath = [
+//  './src/files/scss/main.scss',
+//  './src/files/scss/!(main|media).scss',
+//  './src/files/scss/media.scss'
+//]
 
 
-//SASS task function
-function styles_scss(){
-  cssClean();
-  //Files source
-  return gulp.src('./src/files/scss/*.scss')
-  //Adding sourcemaps
-  .pipe(sourcemaps.init())
-  //Logging errors 
-  .pipe(sass().on('error', sass.logError))
-  //Writing sourcemaps in root dir
-  .pipe(sourcemaps.write('./'))
-  //Destination
-  .pipe(gulp.dest('./src/files/css/'))
-}
+////SASS task function
+//function styles_scss(){
+//  cssClean();
+//  //Files source
+//  return gulp.src('./src/files/scss/*.scss')
+//  //Adding sourcemaps
+//  .pipe(sourcemaps.init())
+//  //Logging errors 
+//  .pipe(sass().on('error', sass.logError))
+//  //Writing sourcemaps in root dir
+//  .pipe(sourcemaps.write('./'))
+//  //Destination
+//  .pipe(gulp.dest('./src/files/css/'))
+//}
 
-//CSS task function
-function styles(){
-  //Files source
-  return gulp.src('./src/files/css/*.css')
-  .pipe(order(['**.*']))
-  //Concatination
-  .pipe(concat('styles.css'))
-  //Prefixes
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions'],
-    cascade:false
-  }))
-  //Clean CSS
-  .pipe(cleanCSS({
-    level: 2
-  }))
-  //Destination
-  .pipe(gulp.dest('./build/css'))
-  //Syncronizing files
-  .pipe(browserSync.stream());
-}
+////CSS task function
+//function styles(){
+//  //Files source
+//  return gulp.src('./src/files/css/*.css')
+//  .pipe(order(['**.*']))
+//  //Concatination
+//  .pipe(concat('styles.css'))
+//  //Prefixes
+//  .pipe(autoprefixer({
+//    browsers: ['last 2 versions'],
+//    cascade:false
+//  }))
+//  //Clean CSS
+//  .pipe(cleanCSS({
+//    level: 2
+//  }))
+//  //Destination
+//  .pipe(gulp.dest('./build/css'))
+//  //Syncronizing files
+//  .pipe(browserSync.stream());
+//}
 
 function sassConcat(){
-  cssClean();
   return gulp.src('./src/files/scss/*.scss')
   //Ordering items
   .pipe(order(['**.*']))
@@ -73,11 +72,47 @@ function sassConcat(){
   //Writing sourcemaps in root dir
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('./src/files/css/'))
-  
 }
 
-function sassToCss (){
+function sassConcat_products(){
+  return gulp.src('./src/files/scss/products/*.scss')
+  //Ordering items
+  .pipe(order(['**.*']))
+  //Files concat
+  .pipe(concat('styles_products.scss'))
+  //Destination
+  .pipe(gulp.dest('./src/files/css/'))
+
+  .pipe(sourcemaps.init())
+  //Logging errors 
+  .pipe(sass().on('error', sass.logError))
+  //Writing sourcemaps in root dir
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest('./src/files/css/'))
+}
+
+function sassToCss(){
+  gulp.parallel(sassToCss_main, sassToCss_products);
+}
+
+function sassToCss_main(){
   return gulp.src('./src/files/css/styles.css')
+  .pipe(autoprefixer({
+    browsers: ['last 2 versions'],
+    cascade:false
+  }))
+  //Clean CSS
+  .pipe(cleanCSS({
+    level: 2
+  }))
+  //Destination
+  .pipe(gulp.dest('./build/css'))
+  //Syncronizing files
+  .pipe(browserSync.stream());
+}
+
+function sassToCss_products(){
+  return gulp.src('./src/files/css/styles_products.css')
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
     cascade:false
@@ -142,12 +177,13 @@ function watch () {
   browserSync.init({
     server:{
       baseDir:"./build/"
-    }
+    },
+    open: false
   });
   //Watch scss files
-  gulp.watch('./src/files/scss/**/*.scss', sassConcat)
+  gulp.watch('./src/files/scss/**/*.scss', gulp.parallel(sassConcat, sassConcat_products))
   //Watch scss file
-  gulp.watch('./src/files/css/styles.scss', sassToCss)
+  gulp.watch('./src/files/css/*.scss', gulp.parallel(sassToCss_main, sassToCss_products))
   //Watch js files
   gulp.watch('./src/files/js/**/*.js', scripts)
   //Watch HTML files
@@ -161,7 +197,7 @@ function watch () {
 }
 
 
-const build_foo = gulp.series(clean, sassConcat, html, gulp.parallel(img, sassToCss, scripts, php));
+const build_foo = gulp.series(clean, sassConcat_products, sassConcat, html, gulp.parallel(img, sassToCss_main, sassToCss_products, scripts, php));
 
 
 

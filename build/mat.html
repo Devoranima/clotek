@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,
+maximum-scale=1.0, user-scalable=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=PT+Sans&family=Roboto+Condensed:wght@300;400&family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css"/>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css"/>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles_products.css">
+
+  <title>Clotek.ru</title>
+</head>
+<body>
+  <header>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">Clotek</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-links" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Подкрылки</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-current="page" href="#">Коврики</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Сани</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Пруды</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Крылья</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <a href="./img/map.svg" download="Прайс-лист" style="text-decoration: none;" class="btn w100 btn-pricelist gradient">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi bi-tags-fill d-block" viewBox="0 0 16 16">
+              <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+              <path d="M1.293 7.793A1 1 0 0 1 1 7.086V2a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l.043-.043-7.457-7.457z"/>
+              </svg>
+              <span>Прайс-лист</span>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <div class="section hero">
+    <div class="container">
+        <div class="hero_grid">
+          <div class="hero_text col-xl-5">
+            <div class="hero_title">
+              Коврики
+            </div>
+            <div class="hero_about">
+              Коврики нашего производства защищают даже самые скрытые места автомобиля, будучи в два раза легче своих резиновых аналогов. Их конструкция позволяет легко вынимать и возвращать изделие для очистки, а также обеспечивает полное прилегание ковров к багажнику. И не стоит больше беспокоиться за устойчивость грузов, наша продукция обладает специальными противоскользящими паттернами
+            </div>
+            <a href="./img/map.svg" download="Прайс-лист" style="text-decoration: none;" class="btn w100 btn-product gradient">
+              <span>Скачать прайс-лист<br><b>Коврики</b></span>
+            </a>
+          </div>
+          <div class="col-xl-6 offset-xl-1">
+            <div class="hero_image">
+              <!--<img src="..." class="card-img-top" alt="...">-->
+              <img src="./img/introSlider/sled.png" alt="">
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="hero_wave">
+      <svg id="visual" viewBox="0 0 1980 200" width="1980" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="1980" height="200" fill="#1A512E"></rect><path d="M0 110L36.7 97C73.3 84 146.7 58 220 66.2C293.3 74.3 366.7 116.7 440 134.5C513.3 152.3 586.7 145.7 660 134.3C733.3 123 806.7 107 880 97C953.3 87 1026.7 83 1100 84.5C1173.3 86 1246.7 93 1320 101.3C1393.3 109.7 1466.7 119.3 1540 117.2C1613.3 115 1686.7 101 1760 85.8C1833.3 70.7 1906.7 54.3 1943.3 46.2L1980 38L1980 201L1943.3 201C1906.7 201 1833.3 201 1760 201C1686.7 201 1613.3 201 1540 201C1466.7 201 1393.3 201 1320 201C1246.7 201 1173.3 201 1100 201C1026.7 201 953.3 201 880 201C806.7 201 733.3 201 660 201C586.7 201 513.3 201 440 201C366.7 201 293.3 201 220 201C146.7 201 73.3 201 36.7 201L0 201Z" fill="#fff" stroke-linecap="round" stroke-linejoin="miter"></path></svg>
+    </div>
+  </div>
+
+
+  <div class="section">
+    <div class="container">
+      <div class="product_photos" id="product_photos">
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+        <a href="./img/introSlider/sled.png" class="product_photo_item col-xl-2">
+          <img src="./img/introSlider/sled.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="footer">
+  <div class="footer_content text-center">Copyright 2022 © <b>Clotek</b>. All Rights Reserved.</div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.0/swiper-bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+
+
+<script src="js/autosize.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
