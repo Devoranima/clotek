@@ -49,6 +49,10 @@ body {
   font-weight: 700;
 }
 
+a {
+  text-decoration: none;
+}
+
 .navbar {
   --bs-navbar-padding-y: 0;
   height: 70px;
@@ -482,9 +486,10 @@ body {
 }
 
 .review_photo {
+  display: block;
   width: 70%;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #d4d4d4;
   margin-left: 0;
   margin-top: -100px;
   margin-bottom: 10px;
@@ -562,6 +567,12 @@ body {
   background: rgba(26, 81, 46, 0.8);
 }
 
+.already {
+  color: #a0a0a0;
+  text-align: center;
+  margin: 30px auto 0;
+}
+
 .contacts {
   background: url("../img/map.svg") no-repeat bottom -200px right -380px, #1A512E;
   padding: 50px 0 200px;
@@ -577,12 +588,53 @@ body {
 
 .contacts_content {
   padding: 15px;
-  background-color: #ffffff;
+  background: rgb(255, 255, 255) url("../img/blob-haikei.svg") no-repeat top 0 left 0;
+  background: rgb(255, 255, 255);
+  background-size: 100% 100%;
 }
 
 .contacts_title {
-  font-size: 40px;
+  line-height: 1.3;
+  font-size: 30px;
   font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.contacts_description {
+  line-height: 1.8;
+  font-size: 20px;
+}
+.contacts_description a {
+  color: rgba(26, 81, 46, 0.9);
+}
+
+.contact_button {
+  background-color: #1A512E;
+  border-radius: 0 10px 10px 0;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  left: -15px;
+  z-index: 1000;
+  transform: translateY(-50%);
+  transition: all 0.15s linear;
+}
+.contact_button:hover {
+  left: 0;
+}
+
+.side_button {
+  display: flex;
+  flex-direction: column;
+}
+.side_button img {
+  display: block;
+  width: 70%;
+  transform: translateY(-50%);
+  margin-top: 50%;
+  margin-right: 5px;
+  margin-left: auto;
 }
 
 .request-form {
@@ -637,9 +689,16 @@ body {
   padding-left: 40px;
   transition: all 0.2s linear;
 }
+.input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 1; /* Firefox */
+}
 .input:focus {
   outline: none;
-  border-color: rgba(0, 0, 0, 0.6);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.input:focus::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .input-name {
@@ -878,6 +937,9 @@ body {
   }
   .contacts_description {
     font-size: 18px;
+  }
+  .contact_button {
+    display: none;
   }
 }
 @media (max-width: 767px) {

@@ -8,6 +8,46 @@ $(document).ready(function(){
   */
   const $body = $("body");
 
+  $(window).on("scroll", function(){
+    sideButton();
+  })
+
+
+
+  //side button opacity
+  
+  function sideButton(){
+    let scrollTop = $(this).scrollTop();
+    let element = $("#contacts");
+    let pos = element.offset().top;
+    let windowH = $(window).height();
+    if(scrollTop + windowH*2 / 3 >= pos){
+      $(".contact_button").css({
+        opacity: '0'
+      });
+    }
+    else{
+      $(".contact_button").css({
+        opacity: '1'
+      });
+    }
+  }
+
+
+
+  //disable current page link 
+
+  $(".nav-item a").each(
+    function(index)
+        {
+            if(window.location.href==this.href)
+            {
+                $(this).addClass("disabled");
+            }
+        }
+  );
+  
+
  /*  Smooth scroll to sections  =============================================*/
 
   $("[data-scroll]").on("click", function(event){
@@ -51,11 +91,11 @@ $(document).ready(function(){
    /*  Modal  =============================================*/
 
    $("[data-modal]").on("click", function(event){
-    //event.preventDefault();
+    event.preventDefault();
 
     let modal = $(this).data('modal');
 
-    $(modal).addClass("show");
+    $ (modal).addClass("show");
     $('body').addClass('no-scroll');
 
     setTimeout(()=>{
@@ -63,7 +103,7 @@ $(document).ready(function(){
             transform: 'translateY(0)',
             opacity: '1'
         });
-    })
+    }, 150);
   })
 
   function modalClose(){
@@ -79,19 +119,11 @@ $(document).ready(function(){
       $('body').removeClass('no-scroll');
   }
 
-  $("[data-close]").on("click", function(){
-
+  $("[data-close]").on("click", function(event){
+    event.preventDefault();
     modalClose();
 
   })
-
-  /* 
-  $(".modal").on("click", function(){
-
-      modalClose();
-
-  })
-  */
 
   /*
   $(".modal__content").on("click", (event)=>{
