@@ -8,14 +8,12 @@ $(document).ready(function(){
   */
   const $body = $("body");
 
+  //side button opacity
+  
   $(window).on("scroll", function(){
     sideButton();
   })
 
-
-
-  //side button opacity
-  
   function sideButton(){
     let scrollTop = $(this).scrollTop();
     let element = $("#contacts");
@@ -40,7 +38,7 @@ $(document).ready(function(){
   $(".nav-item a").each(
     function(index)
         {
-            if(window.location.href==this.href)
+          if(window.location.href==this.href)
             {
                 $(this).addClass("disabled");
             }
@@ -69,7 +67,7 @@ $(document).ready(function(){
   )
 
 
-  const swiper = new Swiper (".swiper", {}); 
+//Intro slider
 
   const sliderIntro_text = new Swiper (".swiper--intro_text", {
     loop: true,
@@ -84,7 +82,6 @@ $(document).ready(function(){
   });
 
   sliderIntro_text.on('slideChange', ()=>{sliderIntro_image.slideNext()});
-
 
 
 
@@ -132,16 +129,34 @@ $(document).ready(function(){
 */
 
 
+//Galleries
+
+  lightGallery(document.getElementById('product_photos'), {
+    animateThumb: false,  
+    zoomFromOrigin: false,
+    allowMediaOverlap: true,
+    toggleThumb: true,
+    subHtmlSelectorRelative: true,
+  });
+
+  lightGallery(document.getElementById('under_wing__slider'), {
+    animateThumb: false,  
+    zoomFromOrigin: false,
+    allowMediaOverlap: true,
+    toggleThumb: true,
+    subHtmlSelectorRelative: true,
+  });
+
+
 
   //Product slider
-
 
   $('.product__slider').slick({
     infinite:true,
     arrows: false,
     autoplay:true,
     dots:true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 2000
   })
 
 
@@ -178,16 +193,7 @@ $(document).ready(function(){
   $('textarea').on('input', function () {
     this.style.height = 'auto';
       
-    this.style.height = 
-            (this.scrollHeight) + 'px';
-  });
-
-
-  lightGallery(document.getElementById('product_photos'), {
-    animateThumb: false,  
-    zoomFromOrigin: false,
-    allowMediaOverlap: true,
-    toggleThumb: true,
+    this.style.height = (this.scrollHeight) + 'px';
   });
 
 

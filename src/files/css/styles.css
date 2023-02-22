@@ -53,6 +53,10 @@ a {
   text-decoration: none;
 }
 
+.lg-backdrop {
+  background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+}
+
 .navbar {
   --bs-navbar-padding-y: 0;
   height: 70px;
@@ -714,6 +718,8 @@ a {
   resize: none;
   min-height: 1em;
   max-height: 10em;
+  overflow: hidden;
+  transition: all 0.2s linear;
 }
 
 .btn-form-submit {
@@ -1057,9 +1063,6 @@ a {
   }
   .product_block-description {
     font-size: 18px;
-  }
-  .product_block-description > span {
-    display: none;
   }
   .slider-reviews .slick-list {
     margin: 0 100px;

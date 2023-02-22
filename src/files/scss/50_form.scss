@@ -84,6 +84,8 @@
   resize: none;
   min-height: 1em;
   max-height: 10em;
+  overflow: hidden;
+  transition: all .2s linear;
 }
 
 
