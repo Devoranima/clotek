@@ -57,6 +57,10 @@ a {
   background: radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
 }
 
+img.lg-object {
+  max-height: 60% !important;
+}
+
 .navbar {
   --bs-navbar-padding-y: 0;
   height: 70px;

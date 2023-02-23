@@ -147,7 +147,37 @@ $(document).ready(function(){
     subHtmlSelectorRelative: true,
   });
 
+  lightGallery(document.getElementById('mat_slider'), {
+    animateThumb: false,  
+    zoomFromOrigin: false,
+    allowMediaOverlap: true,
+    toggleThumb: true,
+    subHtmlSelectorRelative: true,
+  })
 
+  lightGallery(document.getElementById('sled_slider'), {
+    animateThumb: false,  
+    zoomFromOrigin: false,
+    allowMediaOverlap: true,
+    toggleThumb: true,
+    subHtmlSelectorRelative: true,
+  })
+
+  lightGallery(document.getElementById('lake_slider'), {
+    animateThumb: false,  
+    zoomFromOrigin: false,
+    allowMediaOverlap: true,
+    toggleThumb: true,
+    subHtmlSelectorRelative: true,
+  })
+
+  lightGallery(document.getElementById('wing_slider'), {
+    animateThumb: false,  
+    zoomFromOrigin: false,
+    allowMediaOverlap: true,
+    toggleThumb: true,
+    subHtmlSelectorRelative: true,
+  })
 
   //Product slider
 
