@@ -91,10 +91,9 @@ function sassConcat_products(){
   .pipe(gulp.dest('./src/files/css/'))
 }
 
+
 function sassToCss(){
   gulp.parallel(sassToCss_main, sassToCss_products)
-  //Syncronizing files
-  .pipe(browserSync.stream());
 }
 
 function sassToCss_main(){
@@ -109,7 +108,7 @@ function sassToCss_main(){
   }))
   //Destination
   .pipe(gulp.dest('./build/css'))
-
+  .pipe(browserSync.stream());
 }
 
 function sassToCss_products(){
@@ -124,6 +123,7 @@ function sassToCss_products(){
   }))
   //Destination
   .pipe(gulp.dest('./build/css'))
+  .pipe(browserSync.stream());
 }
 
 //JS task function
@@ -182,7 +182,10 @@ function watch () {
   //Watch scss files
   gulp.watch('./src/files/scss/**/*.scss', gulp.parallel(sassConcat, sassConcat_products))
   //Watch scss file
-  gulp.watch('./src/files/css/*.scss', sassToCss)
+  gulp.watch('./src/files/css/*.scss', gulp.parallel(sassToCss_main, sassToCss_products))
+
+  gulp.watch('./build/css/*.css', browserSync.reload());
+
   //Watch js files
   gulp.watch('./src/files/js/**/*.js', scripts)
   //Watch HTML files

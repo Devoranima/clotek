@@ -227,4 +227,18 @@ $(document).ready(function(){
   });
 
 
+  //Jumper
+
+  $('.form-header').hover(()=>{
+    if($(window).scrollTop() == 0){
+      $('.about_form').css({
+        margin: '-60px 0 0 0'
+      })
+    }
+  }, ()=>{
+    $('.about_form').css({
+      margin: '-20px 0 0 0'
+    })
+  })
+
 })
