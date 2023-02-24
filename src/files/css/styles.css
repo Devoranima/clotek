@@ -54,7 +54,7 @@ a {
 }
 
 .lg-backdrop {
-  background: radial-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.6));
+  background: radial-gradient(rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.8));
   backdrop-filter: blur(10px);
 }
 
@@ -202,6 +202,13 @@ img.lg-object {
   pointer-events: none;
 }
 */
+.swiper {
+  display: none;
+}
+.swiper.swiper-container-initialized {
+  display: block;
+}
+
 .slider--intro_text {
   height: auto;
   width: 260px;
@@ -492,6 +499,10 @@ img.lg-object {
   border: 1px solid #000;
   position: relative;
   padding: 50px 10px 10px;
+  display: none;
+}
+.review.slick-slide {
+  display: flex;
 }
 
 .review_photo {

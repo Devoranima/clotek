@@ -19,10 +19,9 @@ $text = trim($text);
 
 
 if ($_POST['submit']){
-  
-echo $name;
-echo "<br>";
-echo $phone;
-echo "<br>";
-echo $text;
+  echo $name;
+  echo "<br>";
+  echo $phone;
+  echo "<br>";
+  echo $text;
 }

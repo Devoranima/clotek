@@ -55,6 +55,14 @@
 
 // Swiper intro
 
+.swiper{
+  display: none;
+  &.swiper-container-initialized {
+    display: block;
+  }
+}
+
+
 .slider--intro_text{
   height: auto;
   width: 260px;

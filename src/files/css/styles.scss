@@ -66,7 +66,7 @@ a{
 
 
 .lg-backdrop {
-  background: radial-gradient(rgba(#fff, .1),rgba(0, 0, 0, .6));
+  background: radial-gradient(rgba(#fff, .3),rgba(0, 0, 0, .8));
   backdrop-filter: blur(10px);
 }
 
@@ -243,6 +243,14 @@ img.lg-object{
 
 
 // Swiper intro
+
+.swiper{
+  display: none;
+  &.swiper-container-initialized {
+    display: block;
+  }
+}
+
 
 .slider--intro_text{
   height: auto;
@@ -450,7 +458,7 @@ img.lg-object{
   margin-bottom: 20px;
   transition: .3s all;
   &:hover{
-     scale: 1.15;
+    scale: 1.15;
   }
   img{
     width: 100%;
@@ -464,7 +472,6 @@ img.lg-object{
   color: #000;
   text-align: center;
 }
-
 
 
 .product_block-title{
@@ -558,6 +565,13 @@ img.lg-object{
 }
 
 
+//.slick-slider{
+//  display: none;
+//  &.slick-initialized{
+//    display: block;
+//  }
+//}
+
 .reviews{
   padding-bottom: 100px;
   padding-top: 100px;
@@ -573,7 +587,10 @@ img.lg-object{
   border: 1px solid #000;
   position: relative;
   padding: 50px 10px 10px;
-  
+  display: none;
+  &.slick-slide{
+    display: flex;
+  }
 }
 
 .review_photo{

@@ -13,7 +13,10 @@
   border: 1px solid #000;
   position: relative;
   padding: 50px 10px 10px;
-  
+  display: none;
+  &.slick-slide{
+    display: flex;
+  }
 }
 
 .review_photo{
