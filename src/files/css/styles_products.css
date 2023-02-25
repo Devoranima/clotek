@@ -126,6 +126,9 @@ body {
   .hero_image {
     display: none;
   }
+  .product_photo_item {
+    padding: 10px 30px;
+  }
   .section::after {
     top: 300px;
     transform: rotate(90deg) !important;
