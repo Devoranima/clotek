@@ -1412,7 +1412,13 @@ img.lg-object{
     //About us
 
     .about-description{
-      font-size: 16px;
+      font-size: 15px;
+    }
+
+    //Products
+
+    .product_block-description{
+      font-size: 15px;
     }
 
     //reviews
@@ -1432,6 +1438,9 @@ img.lg-object{
     .btn-reviews{
       font-size: 20px;
     }
+
+
+    
 }
 
 @media(max-width:328px){

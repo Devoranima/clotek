@@ -461,7 +461,13 @@
     //About us
 
     .about-description{
-      font-size: 16px;
+      font-size: 15px;
+    }
+
+    //Products
+
+    .product_block-description{
+      font-size: 15px;
     }
 
     //reviews
@@ -481,6 +487,9 @@
     .btn-reviews{
       font-size: 20px;
     }
+
+
+    
 }
 
 @media(max-width:328px){
