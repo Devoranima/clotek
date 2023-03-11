@@ -1,3 +1,4 @@
+$main-color:#287243;
 $main-color:#1A512E;
 $second-color:#970009;
 
@@ -194,6 +195,7 @@ img.lg-object{
   max-height:1500px;
   position: relative;
   background: url("../img/gears-solid.svg") no-repeat right 0 top 0;
+  overflow: hidden;
 }
 
 .intro-basis{
@@ -265,7 +267,8 @@ img.lg-object{
 .slider--intro_images{
   margin-left: auto; 
   margin-right: 0;
-  width: 60%;
+  width:60%;
+  max-height: 60%;
   
   z-index: 10;
   //margin: auto 0;
@@ -419,7 +422,7 @@ img.lg-object{
 
 .about-description{
   font-weight: 200;
-  font-size: 30px;
+  font-size: 25px;
   >span{
     font-weight: 400;
   }
@@ -770,7 +773,7 @@ img.lg-object{
 //машинка
 .request-form{
   z-index: 50;
-  border-radius: 10px 10px 5px 5px;
+  //border-radius: 10px 10px 5px 5px;
   height: auto;
   align-self:flex-start;
   padding: 0;
@@ -807,6 +810,8 @@ img.lg-object{
 .form-content{
   background-color: #ECECEC;
   padding: 30px 15px 10px;
+  border-radius: 0 0 5px 5px;
+  background-color: rgba(#ececec, .9);
 }
 
 .form-group{
@@ -983,7 +988,7 @@ img.lg-object{
   //About
 
   .about-description{
-    font-size: 25px;
+    font-size: 21px;
   }
 
 
@@ -1081,14 +1086,14 @@ img.lg-object{
 
   //Form
 
-  .form-header{
-    //border: 3px solid #fff; 
-    //border-radius: 0;
-  }
+  //.form-header{
+  //  //border: 3px solid #fff; 
+  //  //border-radius: 0;
+  //}
 
-  .about_form{
-    //margin-top: 0;
-  }
+  //.about_form{
+  //  //margin-top: 0;
+  //}
 
   
   //About
@@ -1101,7 +1106,7 @@ img.lg-object{
     display: block;
     margin-top: 100px;
     .about-description{
-      font-size: 20px;
+      font-size: 21px;
     }
   }
 
@@ -1115,7 +1120,6 @@ img.lg-object{
   }
 
   .about-description{
-    font-size: 26px;
     span{
       display: none;
     }
@@ -1418,7 +1422,7 @@ img.lg-object{
     //Products
 
     .product_block-description{
-      font-size: 15px;
+      font-size: 13px;
     }
 
     //reviews
@@ -1465,6 +1469,11 @@ img.lg-object{
     }
   }
 
+  //Products
+
+  .product_block-description{
+    font-size: 11px;
+  }
 
   //Reviews
 

@@ -5,7 +5,7 @@
     <div class="form-subtitle">и наши специалисты свяжутся с вами в ближайшее время!</div>  
   </div>
   <div class="form-content">
-    <form action="" class="form" method="post">
+    <form action="" class="form" method="post" onsubmit="send(event)">
       <div class="form-group">
         <input class="input input-name" type="text" name="name" id="" placeholder="Ваше имя" required>
       </div>
@@ -13,7 +13,7 @@
         <input class="input input-tel" type="text" name="num" id="phone" placeholder="Ваш номер телефона" required>
       </div>
       <div class="form-group">
-        <textarea class="input input-textarea" type="text" name="message" id="" placeholder="Ваш вопрос (при наличии)"></textarea>
+        <textarea class="input input-textarea" type="text" name="message" id="" placeholder="Ваш вопрос"></textarea>
       </div>
       
       <button class="btn btn-danger gradient btn-form-submit" type="submit" data-modal="#thanksModal" name="submit">Позвоните мне!</button>

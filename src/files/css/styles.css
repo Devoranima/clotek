@@ -161,6 +161,7 @@ img.lg-object {
   max-height: 1500px;
   position: relative;
   background: url("../img/gears-solid.svg") no-repeat right 0 top 0;
+  overflow: hidden;
 }
 
 .intro-basis {
@@ -223,6 +224,7 @@ img.lg-object {
   margin-left: auto;
   margin-right: 0;
   width: 60%;
+  max-height: 60%;
   z-index: 10;
   pointer-events: none;
 }
@@ -361,7 +363,7 @@ img.lg-object {
 
 .about-description {
   font-weight: 200;
-  font-size: 30px;
+  font-size: 25px;
 }
 .about-description > span {
   font-weight: 400;
@@ -659,7 +661,6 @@ img.lg-object {
 
 .request-form {
   z-index: 50;
-  border-radius: 10px 10px 5px 5px;
   height: auto;
   align-self: flex-start;
   padding: 0;
@@ -693,6 +694,8 @@ img.lg-object {
 .form-content {
   background-color: #ECECEC;
   padding: 30px 15px 10px;
+  border-radius: 0 0 5px 5px;
+  background-color: rgba(236, 236, 236, 0.9);
 }
 
 .form-group {
@@ -846,7 +849,7 @@ img.lg-object {
     display: none;
   }
   .about-description {
-    font-size: 25px;
+    font-size: 21px;
   }
   .product_block-description {
     font-size: 21px;
@@ -916,7 +919,7 @@ img.lg-object {
     margin-top: 100px;
   }
   .about--medium .about-description {
-    font-size: 20px;
+    font-size: 21px;
   }
   .about-text {
     display: flex;
@@ -924,9 +927,6 @@ img.lg-object {
   }
   .about-text .about-brand {
     display: none;
-  }
-  .about-description {
-    font-size: 26px;
   }
   .about-description span {
     display: none;
@@ -1116,7 +1116,7 @@ img.lg-object {
     font-size: 15px;
   }
   .product_block-description {
-    font-size: 15px;
+    font-size: 13px;
   }
   .review_content {
     font-size: 16px;
@@ -1143,6 +1143,9 @@ img.lg-object {
   }
   .ben-item:nth-child(-n+3) {
     padding-bottom: 30px;
+  }
+  .product_block-description {
+    font-size: 11px;
   }
   .slider-reviews .slick-list {
     margin: 0;

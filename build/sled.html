@@ -187,7 +187,7 @@ maximum-scale=1.0, user-scalable=no">
     <div class="form-subtitle">и наши специалисты свяжутся с вами в ближайшее время!</div>  
   </div>
   <div class="form-content">
-    <form action="" class="form" method="post">
+    <form action="" class="form" method="post" onsubmit="send(event)">
       <div class="form-group">
         <input class="input input-name" type="text" name="name" id="" placeholder="Ваше имя" required>
       </div>
@@ -195,7 +195,7 @@ maximum-scale=1.0, user-scalable=no">
         <input class="input input-tel" type="text" name="num" id="phone" placeholder="Ваш номер телефона" required>
       </div>
       <div class="form-group">
-        <textarea class="input input-textarea" type="text" name="message" id="" placeholder="Ваш вопрос (при наличии)"></textarea>
+        <textarea class="input input-textarea" type="text" name="message" id="" placeholder="Ваш вопрос"></textarea>
       </div>
       
       <button class="btn btn-danger gradient btn-form-submit" type="submit" data-modal="#thanksModal" name="submit">Позвоните мне!</button>
@@ -239,6 +239,30 @@ maximum-scale=1.0, user-scalable=no">
 <script src="js/autosize.js"></script>
 
 <script src="js/script.js"></script>
+
+<script>  function send(event){
+    console.log("Sending email...");
+    event.preventDefault ? event.preventDefault() : event.returnValue = false;
+    var req = new XMLHttpRequest();
+    req.open('POST', './php/send.php', true);
+    req.onload = function (){
+      if (req.status >= 200 && req.status <=400){
+        json = JSON.parse(this.response);
+        console.log(json);
+
+
+        if (json.resut === "success"){
+          alert("Email send");
+        }
+        else{
+          alert("Sending error");
+        }
+      }
+      else{alert("Server error: "+req.status);}
+    }
+    req.onerror = function () {alert("Email sending error");};
+    req.send(new FormData(event.target));
+  }</script>
 
 </body>
 </html>

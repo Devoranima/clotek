@@ -32,7 +32,7 @@
   //About
 
   .about-description{
-    font-size: 25px;
+    font-size: 21px;
   }
 
 
@@ -130,14 +130,14 @@
 
   //Form
 
-  .form-header{
-    //border: 3px solid #fff; 
-    //border-radius: 0;
-  }
+  //.form-header{
+  //  //border: 3px solid #fff; 
+  //  //border-radius: 0;
+  //}
 
-  .about_form{
-    //margin-top: 0;
-  }
+  //.about_form{
+  //  //margin-top: 0;
+  //}
 
   
   //About
@@ -150,7 +150,7 @@
     display: block;
     margin-top: 100px;
     .about-description{
-      font-size: 20px;
+      font-size: 21px;
     }
   }
 
@@ -164,7 +164,6 @@
   }
 
   .about-description{
-    font-size: 26px;
     span{
       display: none;
     }
@@ -467,7 +466,7 @@
     //Products
 
     .product_block-description{
-      font-size: 15px;
+      font-size: 13px;
     }
 
     //reviews
@@ -514,6 +513,11 @@
     }
   }
 
+  //Products
+
+  .product_block-description{
+    font-size: 11px;
+  }
 
   //Reviews
 

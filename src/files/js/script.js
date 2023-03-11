@@ -91,40 +91,40 @@ $(document).ready(function(){
 
    /*  Modal  =============================================*/
 
-   $("[data-modal]").on("click", function(event){
-    event.preventDefault();
+  // $("[data-modal]").on("click", function(event){
+  //  event.preventDefault();
 
-    let modal = $(this).data('modal');
+  //  let modal = $(this).data('modal');
 
-    $ (modal).addClass("show");
-    $('body').addClass('no-scroll');
+  //  $ (modal).addClass("show");
+  //  $('body').addClass('no-scroll');
 
-    setTimeout(()=>{
-        $(modal).find('.modal_content').css({
-            transform: 'translateY(0)',
-            opacity: '1'
-        });
-    }, 150);
-  })
+  //  setTimeout(()=>{
+  //      $(modal).find('.modal_content').css({
+  //          transform: 'translateY(0)',
+  //          opacity: '1'
+  //      });
+  //  }, 150);
+  //})
 
-  function modalClose(){
-      $(".modal").each(function(){
-          $(this).find(".modal_content").css({
-              transform: 'translateY(-100px)',
-              opacity:'0'
-          });
-          setTimeout(()=>{
-              $(this).removeClass("show");
-          }, 200)
-      })
-      $('body').removeClass('no-scroll');
-  }
+  //function modalClose(){
+  //    $(".modal").each(function(){
+  //        $(this).find(".modal_content").css({
+  //            transform: 'translateY(-100px)',
+  //            opacity:'0'
+  //        });
+  //        setTimeout(()=>{
+  //            $(this).removeClass("show");
+  //        }, 200)
+  //    })
+  //    $('body').removeClass('no-scroll');
+  //}
 
-  $("[data-close]").on("click", function(event){
-    event.preventDefault();
-    modalClose();
+  //$("[data-close]").on("click", function(event){
+  //  event.preventDefault();
+  //  modalClose();
 
-  })
+  //})
 
   /*
   $(".modal__content").on("click", (event)=>{
@@ -261,5 +261,34 @@ $(document).ready(function(){
     var src = $(this).attr("href");
     $("#main_product_image").attr("src", src);
   });
+
+
+  //Form
+
+  function send(event, php){
+    console.log("Sending email...");
+    //event.preventDefault ? event.preventDefault() : event.returnValue = false;
+    event.preventDefault() 
+    var req = new XMLHttpRequest();
+    req.open('POST', php, true);
+    req.onload = function (){
+      if (req.status >= 200 && req.status <=400){
+        json = JSON.parse(this.response);
+        console.log(json);
+
+
+        if (json.resut === "success"){
+          alert("Email send");
+        }
+        else{
+          alert("Sending error");
+        }
+      }
+      else{alert("Server error: "+req.status);}
+    }
+    req.onerror = function () {alert("Email sending error");};
+    req.send(new FormData(event.target));
+  }
+
 
 })

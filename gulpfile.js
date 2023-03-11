@@ -131,9 +131,9 @@ function scripts(){
   //Files source
   return gulp.src('./src/files/js/*.js')
   //Uglification
-  .pipe(uglify({
-    toplevel:true
-  }))
+  //.pipe(uglify({
+  //  toplevel:true
+  //}))
   //Destination
   .pipe(gulp.dest('./build/js'))
   //Syncronizing files

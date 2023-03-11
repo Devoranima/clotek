@@ -5,6 +5,7 @@
   max-height:1500px;
   position: relative;
   background: url("../img/gears-solid.svg") no-repeat right 0 top 0;
+  overflow: hidden;
 }
 
 .intro-basis{
@@ -76,7 +77,8 @@
 .slider--intro_images{
   margin-left: auto; 
   margin-right: 0;
-  width: 60%;
+  width:60%;
+  max-height: 60%;
   
   z-index: 10;
   //margin: auto 0;

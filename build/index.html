@@ -146,7 +146,7 @@ maximum-scale=1.0, user-scalable=no">
     <div class="form-subtitle">и наши специалисты свяжутся с вами в ближайшее время!</div>  
   </div>
   <div class="form-content">
-    <form action="" class="form" method="post">
+    <form action="" class="form" method="post" onsubmit="send(event)">
       <div class="form-group">
         <input class="input input-name" type="text" name="name" id="" placeholder="Ваше имя" required>
       </div>
@@ -154,7 +154,7 @@ maximum-scale=1.0, user-scalable=no">
         <input class="input input-tel" type="text" name="num" id="phone" placeholder="Ваш номер телефона" required>
       </div>
       <div class="form-group">
-        <textarea class="input input-textarea" type="text" name="message" id="" placeholder="Ваш вопрос (при наличии)"></textarea>
+        <textarea class="input input-textarea" type="text" name="message" id="" placeholder="Ваш вопрос"></textarea>
       </div>
       
       <button class="btn btn-danger gradient btn-form-submit" type="submit" data-modal="#thanksModal" name="submit">Позвоните мне!</button>
@@ -173,7 +173,7 @@ maximum-scale=1.0, user-scalable=no">
             Clotek
           </div>
           <div class="about-description">
-            Вот уже более 20 лет Слотек дарит людям надежность и качество в обустройстве автомобиля и дома. Наш ассортимент широк, а материал качественен. Сотрудничая с компаниями по всей России и за рубежом, мы подбираем индивидуальный подход к каждому заказчику, включая возможность проектирования и внесения необходимых изменений в конструкцию изделий.<br>Наш девиз - <span>"Высокое качество, надежные поставки, большой ассортимент...И все сразу!"</span>
+            Вот уже более 20 лет Слотек дарит людям надежность и качество в обустройстве автомобиля и дома. Наш ассортимент широк, а материал качественен. Сотрудничая с компаниями по всей России и за рубежом, мы подбираем индивидуальный подход к каждому заказчику, включая возможность проектирования и внесения необходимых изменений в конструкцию изделий.<br><span>Наш девиз - "Высокое качество, надежные поставки, большой ассортимент...И все сразу!"</span>
           </div>
         </div>
       </div>
@@ -192,7 +192,7 @@ maximum-scale=1.0, user-scalable=no">
             <div class="ben-icon"><img src="./img/price-tag-svgrepo-com.svg" alt="">
             </div>      
             <div class="ben-text">
-              Низкие цены
+              Цены от производителя
             </div>
           </div>
           <div class="ben-item">
@@ -553,7 +553,7 @@ maximum-scale=1.0, user-scalable=no">
         <div class="contacts_description text-start">
           Адрес: <a href="https://go.2gis.com/krxku" target="_blank">Россия, Республика Татарстан, Казань, Техническая улица, 23А</a>
           <br>Номера телефонов: <a href="tel:+79179251675">89179251675</a>, <a href="tel:+79372856301">89372856301</a>
-          <br>Электронная почта: <a href="mailto:clotek@mail.ru">clotek@mail.ru</a>
+          <br>Электронная почта: <a href="mailto:clotek@mail.ru">clotek@mail.ru</a> <a href="mailto:slotex-kazan@mail.ru">slotex-kazan@mail.ru</a>
         </div>
       </div>
       <div class="col-12 mt-5 col-md-10 offset-md-1 col-lg-6 offset-lg-0 mt-lg-0">
@@ -580,7 +580,7 @@ maximum-scale=1.0, user-scalable=no">
     <div class="form-subtitle">и наши специалисты свяжутся с вами в ближайшее время!</div>  
   </div>
   <div class="form-content">
-    <form action="" class="form" method="post">
+    <form action="" class="form" method="post" onsubmit="send(event)">
       <div class="form-group">
         <input class="input input-name" type="text" name="name" id="" placeholder="Ваше имя" required>
       </div>
@@ -588,7 +588,7 @@ maximum-scale=1.0, user-scalable=no">
         <input class="input input-tel" type="text" name="num" id="phone" placeholder="Ваш номер телефона" required>
       </div>
       <div class="form-group">
-        <textarea class="input input-textarea" type="text" name="message" id="" placeholder="Ваш вопрос (при наличии)"></textarea>
+        <textarea class="input input-textarea" type="text" name="message" id="" placeholder="Ваш вопрос"></textarea>
       </div>
       
       <button class="btn btn-danger gradient btn-form-submit" type="submit" data-modal="#thanksModal" name="submit">Позвоните мне!</button>
@@ -633,5 +633,29 @@ maximum-scale=1.0, user-scalable=no">
 <script src="js/autosize.js"></script>
 
 <script src="js/script.js"></script>
+
+<script>  function send(event){
+    console.log("Sending email...");
+    event.preventDefault ? event.preventDefault() : event.returnValue = false;
+    var req = new XMLHttpRequest();
+    req.open('POST', './php/send.php', true);
+    req.onload = function (){
+      if (req.status >= 200 && req.status <=400){
+        json = JSON.parse(this.response);
+        console.log(json);
+
+
+        if (json.resut === "success"){
+          alert("Email send");
+        }
+        else{
+          alert("Sending error");
+        }
+      }
+      else{alert("Server error: "+req.status);}
+    }
+    req.onerror = function () {alert("Email sending error");};
+    req.send(new FormData(event.target));
+  }</script>
 </body>
 </html>
