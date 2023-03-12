@@ -28,16 +28,17 @@ try {
   $mail->CharSet = "UTF-8";
   $mail->SMTPAuth = true;
   $mail->Debugoutput = function ($str, $level){$GLOBALS['status'][]=$str;};
-  $mail->SMTPDebug = 2;
+  //$mail->SMTPDebug = 2;
 
 
   //Mail settings
   $mail->Host = 'smtp.yandex.ru';
-  $mail->Username = 'Clotek116';
-  $mail->Password = '32309191';
+  $mail->Username = 'clotek.mailer';
+  $mail->Password = '6LC#I95Ucy';
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
-  $mail->setFrom('noreply@clotek.ru', 'Администратор clotek.ru');
+  //$mail->setFrom('noreply@clotek.ru', 'Администратор clotek.ru');
+  $mail->setFrom('clotek.mailer@yandex.ru', 'Администратор clotek.ru');
   
   
   //Email recipient

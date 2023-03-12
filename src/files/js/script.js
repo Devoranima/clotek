@@ -91,46 +91,45 @@ $(document).ready(function(){
 
    /*  Modal  =============================================*/
 
-  // $("[data-modal]").on("click", function(event){
-  //  event.preventDefault();
+  $('[data-modal ="#becomeClientModal"]').on("click", function(event){
+    event.preventDefault();
 
-  //  let modal = $(this).data('modal');
+    let modal = $(this).data('modal');
 
-  //  $ (modal).addClass("show");
-  //  $('body').addClass('no-scroll');
+    $ (modal).addClass("show");
+    $('body').addClass('no-scroll');
 
-  //  setTimeout(()=>{
-  //      $(modal).find('.modal_content').css({
-  //          transform: 'translateY(0)',
-  //          opacity: '1'
-  //      });
-  //  }, 150);
-  //})
+    setTimeout(()=>{
+        $(modal).find('.modal_content').css({
+            transform: 'translateY(0)',
+            opacity: '1'
+        });
+    }, 150);
+  })
 
-  //function modalClose(){
-  //    $(".modal").each(function(){
-  //        $(this).find(".modal_content").css({
-  //            transform: 'translateY(-100px)',
-  //            opacity:'0'
-  //        });
-  //        setTimeout(()=>{
-  //            $(this).removeClass("show");
-  //        }, 200)
-  //    })
-  //    $('body').removeClass('no-scroll');
-  //}
+  function modalClose(){
+      $(".modal").each(function(){
+          $(this).find(".modal_content").css({
+              transform: 'translateY(-100px)',
+              opacity:'0'
+          });
+          setTimeout(()=>{
+              $(this).removeClass("show");
+          }, 200)
+      })
+      $('body').removeClass('no-scroll');
+  }
 
-  //$("[data-close]").on("click", function(event){
-  //  event.preventDefault();
-  //  modalClose();
+  $("[data-close]").on("click", function(event){
+    event.preventDefault();
+    modalClose();
 
-  //})
+  })
 
-  /*
   $(".modal__content").on("click", (event)=>{
       event.stopPropagation();
   })
-*/
+
 
 
 //Galleries
@@ -220,13 +219,14 @@ $(document).ready(function(){
   })
 
 
-  //Mask for phone number
+  //Mask for phone number and textarea
 
-  $('#phone').mask('+7(000)000-00-00');
+  $('.input-tel').each(function(){
+    $(this).mask('+7(000)000-00-00');
+  });
   
   $('textarea').on('input', function () {
     this.style.height = 'auto';
-      
     this.style.height = (this.scrollHeight) + 'px';
   });
 
@@ -265,30 +265,64 @@ $(document).ready(function(){
 
   //Form
 
-  function send(event, php){
+  var canSubmit = false;
+
+  $(".input-tel").on('input', function(){
+    $(this).addClass("highlighted_input")
+    canSubmit = false;
+    if ($(this).val().length == 16 || $(this).val().length == 0){
+      $(this).removeClass("highlighted_input")
+      canSubmit = true;
+    }
+  })
+
+  $(".form").on("submit", function (e){
+    if (canSubmit === false) {
+      $(".wrongNumber").addClass("show");
+      e.preventDefault();
+      return;
+    }
+    $(".wrongNumber").removeClass("show");
+    send(e);
+    e.preventDefault();
+  })
+
+  function send(event){
     console.log("Sending email...");
-    //event.preventDefault ? event.preventDefault() : event.returnValue = false;
-    event.preventDefault() 
+    event.preventDefault ? event.preventDefault() : event.returnValue = false;
     var req = new XMLHttpRequest();
-    req.open('POST', php, true);
+    req.open('POST', './php/send.php', true);
     req.onload = function (){
       if (req.status >= 200 && req.status <=400){
         json = JSON.parse(this.response);
-        console.log(json);
 
-
-        if (json.resut === "success"){
-          alert("Email send");
+        if (json.result === "success"){
+          showThanks();
         }
         else{
-          alert("Sending error");
+          alert("Sending error, try again");
         }
       }
-      else{alert("Server error: "+req.status);}
+      else{alert("Server error: " + req.status);}
     }
     req.onerror = function () {alert("Email sending error");};
     req.send(new FormData(event.target));
   }
 
+  function showThanks(){
+    $(".input").each(function(){
+      $(this).val('');
+    })
+    let modal = $('[data-modal ="#thanksModal"]').data('modal');
+    $(modal).addClass("show");
+    $('body').addClass('no-scroll');
+
+    setTimeout(()=>{
+      $(modal).find('.modal_content').css({
+          transform: 'translateY(0)',
+          opacity: '1'
+      });
+    }, 150);
+  }
 
 })

@@ -99,7 +99,24 @@
 
 }
 
-
 .about_form{
   margin-top: -20px;
+}
+
+.highlighted_input{
+  border-bottom: 1px solid red;
+  background-color: #edc0c0;
+  border-radius: 3px;
+}
+
+.wrongNumber{
+  display: none;
+  color: #ff2323;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: -15px;
+  &.show{
+    display: block;
+  }
 }

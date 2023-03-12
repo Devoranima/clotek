@@ -14,27 +14,3 @@
 <script src="js/autosize.js"></script>
 
 <script src="js/script.js"></script>
-
-<script>  function send(event){
-    console.log("Sending email...");
-    event.preventDefault ? event.preventDefault() : event.returnValue = false;
-    var req = new XMLHttpRequest();
-    req.open('POST', './php/send.php', true);
-    req.onload = function (){
-      if (req.status >= 200 && req.status <=400){
-        json = JSON.parse(this.response);
-        console.log(json);
-
-
-        if (json.resut === "success"){
-          alert("Email send");
-        }
-        else{
-          alert("Sending error");
-        }
-      }
-      else{alert("Server error: "+req.status);}
-    }
-    req.onerror = function () {alert("Email sending error");};
-    req.send(new FormData(event.target));
-  }</script>
