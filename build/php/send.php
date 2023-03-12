@@ -43,6 +43,7 @@ try {
   
   //Email recipient
   $mail->addAddress('clotek_mailer@mail.ru');
+  $mail->addAddress('clotek@mail.ru');
 
   //Email sending
 

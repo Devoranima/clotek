@@ -123,10 +123,14 @@ $(document).ready(function(){
   $("[data-close]").on("click", function(event){
     event.preventDefault();
     modalClose();
-
   })
 
-  $(".modal__content").on("click", (event)=>{
+  $(".modal_inner").on("click", function(event){
+    event.preventDefault();
+    modalClose();
+  })
+
+  $(".modal_content").on("click", (event)=>{
       event.stopPropagation();
   })
 
