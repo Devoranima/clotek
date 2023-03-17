@@ -274,11 +274,12 @@ $(document).ready(function(){
   $(".input-tel").on('input', function(){
     $(this).addClass("highlighted_input")
     canSubmit = false;
+    $(".captcha").removeClass("show");
     if ($(this).val().length == 16 || $(this).val().length == 0){
       $(this).removeClass("highlighted_input")
       canSubmit = true;
+      $(".wrongNumber").removeClass("show");
       if ($(this).val().length == 16) $(".captcha").addClass("show");
-      else $(".captcha").removeClass("show");
     }
   })
 
@@ -313,8 +314,6 @@ $(document).ready(function(){
     }
     req.onerror = function () {alert("Email sending error");};
     req.send(new FormData(event.target));
-    grecaptcha.reset();
-    $(".captcha").removeClass("show");
   }
 
   function showThanks(){
