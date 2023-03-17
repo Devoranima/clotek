@@ -240,12 +240,12 @@ $(document).ready(function(){
   $('.form-header').hover(()=>{
     if($(window).scrollTop() == 0){
       $('.about_form').css({
-        margin: '-60px 0 0 0'
+        marginTop: '-60px'
       })
     }
   }, ()=>{
     $('.about_form').css({
-      margin: '-20px 0 0 0'
+      marginTop: '-20px'
     })
   })
 
@@ -331,5 +331,9 @@ $(document).ready(function(){
       });
     }, 150);
   }
+
+  AOS.init({
+    once: true
+  });
 
 })
