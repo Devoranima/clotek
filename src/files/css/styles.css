@@ -62,6 +62,14 @@ img.lg-object {
   max-height: 60% !important;
 }
 
+.captcha {
+  display: none;
+  margin-bottom: 10px;
+}
+.captcha.show {
+  display: block;
+}
+
 .navbar {
   --bs-navbar-padding-y: 0;
   height: 70px;

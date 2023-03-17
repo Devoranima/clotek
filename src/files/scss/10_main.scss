@@ -74,3 +74,11 @@ a{
 img.lg-object{
   max-height: 60% !important;
 }
+
+.captcha{
+  display: none;
+  margin-bottom: 10px;
+  &.show{
+    display: block; 
+  }
+}
