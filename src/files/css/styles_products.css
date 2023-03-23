@@ -109,15 +109,15 @@ body {
   display: block;
   position: relative;
   padding: 10px 60px;
-  transition: all 0.3s ease-out;
-  transform: translateZ(0);
 }
 .product_photo_item img {
   position: relative;
   z-index: 2;
   width: 100%;
+  transition: all 0.3s ease-out;
+  transform: translateZ(0);
 }
-.product_photo_item:hover {
+.product_photo_item img:hover {
   scale: 1.1;
   filter: drop-shadow(10px 15px 3px rgba(0, 0, 0, 0.5));
 }

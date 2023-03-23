@@ -1472,6 +1472,16 @@ img.lg-object{
     
 }
 
+@media (max-width: 420px){
+  .g-recaptcha>div{
+    width: 100% !important;
+  }
+
+  iframe{
+    width: 100%;
+  }
+}
+
 @media(max-width:328px){
 
   .navbar-nav{
