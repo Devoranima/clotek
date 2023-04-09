@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /php/
+Sitemap: https://clotek.ru/sitemap.xml
+
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /cgi-bin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /backup/
