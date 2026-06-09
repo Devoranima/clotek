@@ -303,6 +303,8 @@ $(document).ready(function(){
       if (req.status >= 200 && req.status <=400){
         json = JSON.parse(this.response);
 
+        console.log(this.response);
+
         if (json.result === "success"){
           showThanks();
         }

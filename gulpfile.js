@@ -13,6 +13,11 @@ const fileInclude = require('gulp-file-include');
 const replace = require('gulp-replace');
 const order = require('gulp-order');
 
+//Load environment variables from .env (Node 20.12+ has process.loadEnvFile)
+try { process.loadEnvFile(); } catch (e) { console.warn('No .env file found — reCAPTCHA tokens will be empty.'); }
+const RECAPTCHA_SITE_KEY = process.env.RECAPTCHA_SITE_KEY || '';
+const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY || '';
+
 //const scssPath = [
 //  './src/files/scss/main.scss',
 //  './src/files/scss/!(main|media).scss',
@@ -142,6 +147,7 @@ function scripts(){
 
 function php(){
   return gulp.src('./src/files/php/*.php')
+  .pipe(replace(/{{RECAPTCHA_SECRET_KEY}}/g, RECAPTCHA_SECRET_KEY))
   .pipe(gulp.dest('./build/php/'))
   .pipe(browserSync.stream())
 }
@@ -150,6 +156,7 @@ function html(){
   return gulp.src('./src/*.html')
   .pipe(fileInclude())
   .pipe(replace(/@img\//g, 'img/'))
+  .pipe(replace(/{{RECAPTCHA_SITE_KEY}}/g, RECAPTCHA_SITE_KEY))
   .pipe(gulp.dest('./build/'))
   .pipe(browserSync.stream());
 }

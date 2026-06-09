@@ -80,6 +80,10 @@
   background: url("../img/call.svg") left 10px top 5px no-repeat;
 }
 
+.input-email{
+  background: url("../img/email.svg") left 8px top 5px no-repeat;
+}
+
 
 .input-textarea{
   background: url("../img/message.svg") left 10px top 5px no-repeat;
@@ -88,6 +92,33 @@
   max-height: 10em;
   overflow: hidden;
   transition: all .2s linear;
+}
+
+
+.form-consent{
+  margin-bottom: 20px;
+}
+
+.form-consent-label{
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.2;
+  cursor: pointer;
+  color: rgba(0, 0, 0, .7);
+  >.form-consent-checkbox{
+    margin-top: 3px;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: $main-color;
+    cursor: pointer;
+  }
+  a{
+    color: $main-color;
+    text-decoration: underline;
+  }
 }
 
 

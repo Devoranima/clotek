@@ -10,13 +10,22 @@
         <input class="input input-name" type="text" name="name" id="" placeholder="Ваше имя" required>
       </div>
       <div class="form-group">
+        <input class="input input-email" type="text" name="email" id="email" placeholder="Ваша почта" required>
+      </div>
+      <div class="form-group">
         <input class="input input-tel" type="text" name="num" id="phone" placeholder="Ваш номер телефона" required>
       </div>
       <div class="form-group">
         <textarea class="input input-textarea" type="text" name="message" id="" placeholder="Ваш вопрос" required></textarea>
       </div>
       <div class="wrongNumber">Неправильный номер телефона</div>
-      <div class="g-recaptcha captcha" data-sitekey="6Le99AglAAAAANlZ2tutTqCQfqFWd7ghPAjYB3Ki"></div>
+      <div class="g-recaptcha captcha" data-sitekey="{{RECAPTCHA_SITE_KEY}}"></div>
+      <div class="form-consent">
+        <label class="form-consent-label">
+          <input class="form-consent-checkbox" type="checkbox" name="consent" required>
+          <span>Я согласен с <a href="./privacy.html" target="_blank">политикой конфиденциальности</a> и <a href="./terms.html" target="_blank">условиями использования</a></span>
+        </label>
+      </div>
       <button class="btn btn-danger gradient btn-form-submit" type="submit" data-modal="#thanksModal" name="submit">Позвоните мне!</button>
     </form>
   </div>

@@ -1,5 +1,5 @@
-<header>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+<header class="fixed-top flex-column">
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="#">Clotek</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
@@ -32,8 +32,11 @@
           <li class="nav-item">
             <a class="nav-link" data-scroll="#contacts">Контакты</a>
           </li>
+          <!-- <li class="nav-item notify-only">
+            Только оптовая продажа
+          </li> -->
         </ul>
-        <ul class="navbar-nav">
+        <div class="navbar-nav">
           <a href="https://docs.google.com/spreadsheets/d/1zNeElec7mhyL3hvgMXBuEhl6xjk9PsiyFasOpoRmI98/edit?usp=sharing" target="_blank" download="Прайс-лист" style="text-decoration: none;" class="btn w100 btn-pricelist gradient">
               <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" class="bi bi-tags-fill d-block" viewBox="0 0 16 16">
               <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
@@ -45,4 +48,9 @@
       </div>
     </div>
   </nav>
+  <div class="text-center top-notification p-2">
+    <div class="container">
+      Продажа продукции осуществляется только оптом. Розничные заказы не принимаются.
+    </div>
+  </div>
 </header>

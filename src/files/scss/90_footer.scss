@@ -6,3 +6,15 @@
   width: 100%;
   background-color: rgba(0, 0, 0, .4);
 }
+
+.footer_links{
+  padding-bottom: 8px;
+  a{
+    color: rgba(255, 255, 255, .7);
+    text-decoration: underline;
+    margin: 0 10px;
+    &:hover{
+      color: #fff;
+    }
+  }
+}
